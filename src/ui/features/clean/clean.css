@@ -1,0 +1,163 @@
+.clean9{--c9-bg:var(--xsdsh-panel,#fff);--c9-soft:var(--xsdsh-panel2,#f8fafc);--c9-line:var(--xsdsh-line,#e4e9f0);--c9-text:var(--xsdsh-ink,#101828);--c9-mute:var(--xsdsh-mute,#5b6b80);--c9-accent:var(--xsdsh-accent,#2563eb);font:13px/1.6 var(--xsdsh-font-ui,var(--xsdsh-sans,"Segoe UI","Microsoft YaHei",sans-serif));color:var(--c9-text);padding:0;box-sizing:border-box;display:flex;flex-direction:column;height:100%;min-height:0;overflow:hidden}.clean9 *{box-sizing:border-box}.clean9 h2,.clean9 h3,.clean9 p{margin:0 0 12px}.clean9 button,.clean9 input,.clean9 select,.clean9 textarea{font:inherit;color:inherit}.clean9 button{cursor:pointer;border:1px solid var(--c9-line);border-radius:8px;padding:6px 12px;background:var(--c9-bg);transition:background .15s var(--xsdsh-ease),border-color .15s var(--xsdsh-ease)}.clean9 button:hover:not(:disabled):not(.clean9-patch-card):not(.clean9-tile){background:var(--xsdsh-hover,#eef3f9);border-color:var(--xsdsh-line-hover,#aab7c8)}.clean9 button.is-primary{background:var(--xsdsh-accent-soft,#e8f0ff);border-color:var(--c9-accent);color:var(--c9-accent)}.clean9 button.is-primary:hover:not(:disabled){background:var(--xsdsh-accent-bg,#e8f0ff)}.clean9 button:disabled{opacity:.45;cursor:not-allowed}.clean9 :focus-visible{outline:2px solid var(--c9-accent);outline-offset:3px}.clean9-page-head{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;color:var(--c9-mute);margin-bottom:8px;font-size:11px;flex:none}.clean9-page-head h2{color:var(--c9-text);font-size:13.5px;margin:0}
+.clean9-pill{display:inline-flex;align-items:center;border:1px solid var(--c9-line);border-radius:99px;padding:0 8px;font-size:10.5px;line-height:18px;color:var(--c9-mute);background:var(--c9-soft)}
+.clean9-version{font-size:11px;color:var(--c9-mute)}.clean9 .clean9-patch-card{display:block;text-align:left;width:100%;background:var(--c9-soft);border:1px solid var(--c9-line);padding:12px 14px;border-radius:12px;margin-bottom:10px;flex:none}.clean9-card-title{font-size:13.5px;font-weight:650;display:flex;justify-content:space-between}.clean9-card-title>span{font-weight:400;color:var(--c9-mute);font-size:11.5px}.clean9-counts{display:flex;gap:18px;flex-wrap:wrap;margin:8px 0 4px}.clean9-counts>span{display:inline-flex;align-items:baseline;gap:4px;min-width:0}.clean9-counts b{font-size:17px;line-height:1.2;font-weight:700}.clean9-counts span span{font-size:11.5px;color:var(--c9-mute)}.clean9 .is-applied{color:var(--xsdsh-ok,#067647)}.clean9 .is-pending{color:var(--xsdsh-warn,#b54708)}.clean9 .is-skipped{color:var(--xsdsh-skip,#6938ef)}.clean9 .is-na{color:var(--xsdsh-na,#7b899b)}.clean9 .is-unknown{color:var(--xsdsh-faint,#7b899b)}.clean9 .is-missing,.clean9 .is-unmatched,.clean9 .is-danger strong,.clean9 .is-error{color:var(--xsdsh-bad,#d92d20)}.clean9-health{display:flex;gap:8px 16px;flex-wrap:wrap;font-size:10.5px;color:var(--c9-mute);overflow-wrap:anywhere}.clean9-health b{color:var(--c9-text);margin-right:4px}.clean9-card-foot{display:flex;justify-content:space-between;font-size:10.5px;color:var(--c9-mute);border-top:1px solid var(--c9-line);margin-top:8px;padding-top:6px}.clean9-tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:clamp(54px,7.6vh,74px);gap:8px;align-content:start;min-height:0;flex:none}.clean9 .clean9-tile{display:flex;align-items:center;gap:10px;min-height:0;height:100%;text-align:left;padding:8px 14px;border-radius:10px;background:var(--c9-soft);border:1px solid var(--c9-line)}.clean9-tile>span:first-child{flex:1}.clean9-tile strong{display:block;font-size:12.5px}.clean9-description{display:block;font-size:11px;line-height:1.5;color:var(--c9-mute);margin-top:2px}.clean9-card-state{flex:none;font-size:10px;line-height:16px;padding:0 8px;border-radius:99px;white-space:nowrap;color:var(--c9-mute);background:var(--xsdsh-mut-soft,rgba(91,107,128,.08))}
+.clean9-card-state.is-ok{color:var(--xsdsh-ok,#3f8f6b);background:var(--xsdsh-ok-soft,rgba(63,143,107,.12))}
+.clean9-card-state.is-warn{color:var(--xsdsh-warn,#b07d2a);background:var(--xsdsh-warn-soft,rgba(176,125,42,.12))}
+.clean9-card-state.is-bad{color:var(--xsdsh-bad,#c0555a);background:var(--xsdsh-bad-soft,rgba(192,85,90,.12))}.clean9-overlay{position:fixed;inset:0;z-index:2147483000;background:var(--xsdsh-overlay,rgba(20,35,46,.5));display:flex;align-items:center;justify-content:center;padding:24px}.clean9-dialog{width:min(1080px,100%);max-height:calc(100dvh - 48px);background:var(--c9-bg);border:1px solid var(--c9-line);border-radius:14px;box-shadow:0 20px 70px #0003;display:flex;flex-direction:column}.clean9-dialog>header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--c9-line);padding:14px 20px;gap:16px}.clean9-dialog>header h2{font-size:16px;margin:0}.clean9-dialog-body{padding:20px;overflow:auto;overscroll-behavior:contain}.clean9-actions,.clean9-toolbar,.clean9-filters{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:12px 0}.clean9-toolbar input{flex:1;min-width:140px}.clean9 input:not([type=checkbox]),.clean9 select,.clean9 textarea{border:1px solid var(--c9-line);background:var(--c9-soft);border-radius:6px;padding:7px 9px;max-width:100%}.clean9 textarea{width:100%;min-height:160px;resize:vertical}.clean9-filters button{font-size:11px;padding:4px 8px}.clean9-filters button[aria-pressed=true]{border-color:var(--c9-accent);color:var(--c9-accent)}.clean9-muted{color:var(--c9-mute);font-size:11px}.clean9-layer{border:1px solid var(--c9-line);border-radius:8px;margin-top:10px}.clean9 summary{cursor:pointer}.clean9-layer>summary{padding:10px 12px;background:var(--c9-soft)}.clean9-layer>summary>span{margin-left:12px;color:var(--c9-mute);font-size:11px}.clean9-layer-note{margin:6px 12px 0;font-size:10.5px;line-height:1.5;color:var(--c9-mute)}.clean9-patch-row{display:flex;align-items:flex-start;gap:12px;border-top:1px solid var(--c9-line);padding:10px 12px}.clean9-patch-row>details{flex:1;min-width:0;overflow-wrap:anywhere}.clean9-patch-row>details>summary{display:flex;justify-content:space-between;gap:12px}.clean9-patch-row p{font-size:12px;margin:8px 0 0}.clean9-status{white-space:nowrap;font-size:11px}.clean9-notice{padding:8px 10px;background:var(--c9-soft);border-radius:6px;overflow-wrap:anywhere}.clean9-diagnostics{margin:12px 0}.clean9-diagnostics p{font-size:12px;margin:8px 0}.clean9-restart-shade{position:fixed;inset:0;z-index:2147483001;background:var(--xsdsh-overlay,rgba(20,35,46,.5));display:flex;align-items:center;justify-content:center;padding:24px}.clean9-restart-dialog{width:min(420px,100%);background:var(--c9-bg);border:1px solid var(--c9-line);border-radius:14px;box-shadow:0 20px 70px #0003;padding:20px}.clean9-restart-dialog h2{margin:0 0 8px;font-size:16px}.clean9-restart-dialog p{margin:0;font-size:12.5px;line-height:1.65;color:var(--c9-mute)}.clean9-restart-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:16px}
+.clean9-confirm-shade{position:fixed;inset:0;z-index:2147483002;background:var(--xsdsh-overlay,rgba(20,35,46,.5));display:flex;align-items:center;justify-content:center;padding:24px}
+.clean9-confirm-dialog{width:min(420px,100%);background:var(--c9-bg);border:1px solid var(--c9-line);border-radius:14px;box-shadow:0 20px 70px #0003;padding:20px}
+.clean9-confirm-dialog h2{margin:0 0 8px;font-size:16px}
+.clean9-confirm-dialog p{margin:0;font-size:12.5px;line-height:1.65;color:var(--c9-mute);overflow-wrap:anywhere}
+.clean9 .clean9-confirm-dialog button.is-primary.is-danger{background:var(--xsdsh-bad-soft,rgba(208,36,26,.10));border-color:var(--xsdsh-bad,#d92d20);color:var(--xsdsh-bad,#d92d20)}
+.clean9 .clean9-confirm-dialog button.is-primary.is-danger:hover:not(:disabled){background:var(--xsdsh-bad-soft,rgba(208,36,26,.16))}.clean9 .xsdsh-split{display:grid;grid-template-columns:minmax(300px,1fr) minmax(300px,1.15fr);gap:16px}.clean9 .xsdsh-ruleitem{padding:10px;border-bottom:1px solid var(--c9-line);cursor:pointer}.clean9 .xsdsh-rule-main,.clean9 .xsdsh-rule-meta{display:block}.clean9 .xsdsh-rule-meta{font-size:11px;color:var(--c9-mute)}.clean9 .xsdsh-rule-ops,.clean9 .xsdsh-create-row,.clean9 .xsdsh-row{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}.clean9 .xsdsh-block{margin:14px 0}.clean9 .xsdsh-cwd-item{display:flex;gap:8px;padding:8px;border-bottom:1px solid var(--c9-line)}.clean9 .xsdsh-cwd-sub,.clean9 .xsdsh-cwd-prev{font-size:11px;overflow-wrap:anywhere}.clean9 .xsdsh-pill{margin-left:8px;font-size:11px}.clean9 .xsdsh-policy-row{display:flex;gap:12px;align-items:center}.clean9 .xsdsh-block-hint,.clean9 .xsdsh-hint{font-size:12px;color:var(--c9-mute)}@media(max-width:700px){.clean9-tiles{grid-template-columns:1fr}.clean9-counts{gap:12px}.clean9-overlay{padding:8px}.clean9-dialog{max-height:calc(100dvh - 16px)}.clean9-dialog-body{padding:12px}.clean9 .xsdsh-split{grid-template-columns:1fr}.clean9-card-state{white-space:normal}.clean9-layer>summary>span{display:block;margin-left:0}}.clean9-progress{display:flex;height:6px;border-radius:4px;overflow:hidden;background:var(--c9-line);margin:8px 0 6px}.clean9-progress>span{background:currentColor;min-width:0}.clean9-progress .is-skipped{color:var(--xsdsh-skip,#a1aab5)}.clean9-progress .is-unknown{color:var(--xsdsh-faint,#788897)}.clean9-revert-results{margin-top:16px;padding-top:14px;border-top:1px solid var(--c9-line);overflow-wrap:anywhere}.clean9-revert-results h3{font-size:14px}.clean9-revert-table{max-height:340px;overflow:auto}.clean9-revert-table table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:12px}.clean9-revert-table th,.clean9-revert-table td{text-align:left;padding:8px;vertical-align:top;border-bottom:1px solid var(--c9-line);overflow-wrap:anywhere}.clean9-revert-table th:first-child{width:45%}.clean9-revert-fast{font-size:12px;color:var(--c9-mute)}/* 正常窗口里清洗页永不滚动（比例缩到能放下）；只有宿主窗口矮到 520px 以下才允许滚动，
+   宁可出滚动条也不裁掉瓷贴内容。 */
+@media(max-height:520px){.clean9{overflow-y:auto}.clean9-tiles{grid-auto-rows:minmax(44px,1fr)}}
+@media(prefers-reduced-motion:reduce){.clean9 *{scroll-behavior:auto}}
+
+.clean9-own-table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:12px}
+/* 列顺序：主机/IP → 删除 → 识别；第一列跟输入框走，删除列紧贴输入框右侧。 */
+.clean9-own-table col:first-child{width:min(340px,62%)}
+.clean9-own-table col:nth-child(2){width:34px}
+.clean9-own-table th{text-align:left;font-size:10.5px;font-weight:600;color:var(--c9-mute);padding:0 6px 4px;border-bottom:1px solid var(--c9-line)}
+.clean9-own-table td{padding:4px 6px;border-bottom:1px solid var(--c9-line);vertical-align:middle}
+.clean9-own-table th:nth-child(2),.clean9-own-table td:nth-child(2){width:34px;padding-left:4px;padding-right:0;text-align:center}
+.clean9-own-table tr:last-child td{border-bottom:0}
+.clean9-own-table input{width:100%;margin:0}
+.clean9-own-table tr.is-bad input{border-color:var(--xsdsh-bad)}
+.clean9-own-kind{display:block;font-size:10.5px;color:var(--c9-mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.clean9-own-kind.is-bad{color:var(--xsdsh-bad)}
+.clean9-own-comments{margin-top:10px;border-top:1px dashed var(--c9-line);padding-top:8px}
+.clean9-own-comments summary{cursor:pointer;font-size:11.5px;color:var(--c9-mute)}
+.clean9-own-hint{font-size:11px;color:var(--c9-mute);margin:6px 0}
+.clean9 .clean9-own-lead{font-size:11.5px;color:var(--c9-mute);margin:0}
+.clean9 .clean9-own-count{margin-left:auto;font-size:11px;color:var(--c9-mute);white-space:nowrap}
+.clean9-own-comment{display:flex;gap:6px;align-items:center;margin:4px 0}
+.clean9-own-comment input{flex:1;min-width:0}
+.clean9-own-comment .clean9-icon-btn{flex:none}
+.clean9-sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+.clean9-rules{display:flex;flex-direction:column;gap:10px;min-height:0}
+.clean9-rules-head{display:flex;align-items:center;gap:8px}
+.clean9-rules-head p{flex:1;margin:0;font-size:11.5px;color:var(--c9-mute)}
+.clean9-rules-count{font-size:11px;color:var(--c9-mute);border:1px solid var(--c9-line);border-radius:99px;padding:0 8px;line-height:18px}
+.clean9-rules-policy{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:8px 10px;border:1px solid var(--c9-line);border-radius:9px;background:var(--c9-soft)}
+.clean9-rules-label{font-size:11.5px;color:var(--c9-mute)}
+.clean9-seg{display:inline-flex;gap:2px;padding:2px;border-radius:8px;background:var(--xsdsh-panel3,#eef2f7)}
+.clean9-seg button{border:0;background:transparent;padding:3px 10px;border-radius:6px;font-size:11.5px;color:var(--c9-mute);min-width:64px;text-align:center}
+.clean9-seg button[aria-pressed=true]{background:var(--c9-bg);color:var(--c9-accent);font-weight:600;box-shadow:0 1px 2px rgba(16,24,40,.14)}
+.clean9-rules-hint{flex:1 1 220px;margin:0;font-size:11px;color:var(--c9-mute)}
+.clean9-rules-cwd{border:1px solid var(--c9-line);border-radius:9px;background:var(--c9-soft);padding:8px 10px}
+.clean9-rules-cwd>summary{cursor:pointer;font-size:11.5px;color:var(--c9-mute)}
+.clean9-rules-cwd-head{display:flex;align-items:center;gap:8px;margin:6px 0;flex-wrap:wrap}
+.clean9-rules-cwd-path{font-family:var(--xsdsh-font-code,monospace);font-size:11px;color:var(--c9-mute);overflow-wrap:anywhere}
+.clean9-rules-body{align-items:stretch;height:clamp(300px,46vh,380px);min-height:0}
+.clean9-rules-list{min-width:0;display:flex;flex-direction:column;border:1px solid var(--c9-line);border-radius:9px;background:var(--c9-bg);overflow:hidden}
+.clean9-rules-list-head{display:flex;align-items:center;gap:8px;padding:7px 10px;border-bottom:1px solid var(--c9-line)}
+.clean9-rules-list-head h4{margin:0;font-size:12px;flex:1}
+.clean9-rules-create{display:flex;flex-direction:column;gap:8px;padding:10px 12px;border-bottom:1px solid var(--c9-line);background:var(--c9-soft)}
+.clean9-rules-create-head{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.clean9-rules-create-head strong{font-size:12px}
+.clean9-rules-create-head span{font-size:10.5px;color:var(--c9-mute)}
+.clean9-rules-create-fields{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px 10px}
+.clean9-rules-create-fields .clean9-field{display:flex;flex-direction:column;gap:3px;min-width:0}
+.clean9-rules-create-fields .clean9-field>span{font-size:10.5px;color:var(--c9-mute)}
+/* 目标文件独占一行，ID 与名称并排。 */
+.clean9-rules-create-fields .clean9-field:nth-child(3){grid-column:1/-1}
+.clean9-rules-create-fields .xsdsh-field,.clean9-rules-create-fields .purge-select{width:100%;min-width:0}
+.clean9 .clean9-rules-create-fields .xsdsh-field,.clean9 .clean9-rules-create-fields .purge-select-trigger{min-height:34px}
+.clean9 .clean9-rules-create-actions{display:flex;justify-content:flex-end;align-items:center;gap:6px;flex-wrap:wrap}
+/* 压过 `.clean9 button` 的 padding/font，按钮高度与字段对齐。 */
+.clean9 .clean9-rules-create-actions .xsdsh-btn{min-height:34px;padding:0 14px;font-size:13px;line-height:1}
+.clean9-rules-scroll{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain}
+.clean9-rules-table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:11.5px}
+.clean9-rules-table th{position:sticky;top:0;background:var(--c9-soft);text-align:left;font-size:10.5px;font-weight:600;color:var(--c9-mute);padding:5px 8px;border-bottom:1px solid var(--c9-line)}
+.clean9-rules-table th:nth-child(2){width:86px}
+.clean9-rules-table th:nth-child(3){width:52px}
+.clean9-rules-table th:nth-child(4){width:58px}
+.clean9-rules-table th:nth-child(5){width:132px}
+.clean9-rules-table td{padding:5px 8px;border-bottom:1px solid var(--c9-line);vertical-align:middle;overflow-wrap:anywhere}
+.clean9-rules-row:hover{background:var(--xsdsh-hover)}
+.clean9-rules-row.is-edit{background:var(--xsdsh-accent-soft)}
+.clean9-rules-row.is-active .clean9-rules-name{font-weight:600}
+/* 用 .clean9 前缀压过 `.clean9 button`，否则名称按钮会拿到方框和背景。 */
+.clean9 .clean9-rules-name{border:0;background:transparent;padding:0;font:inherit;color:var(--c9-text);text-align:left;cursor:pointer;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%;display:block;width:100%}
+.clean9 .clean9-rules-name:hover:not(:disabled){color:var(--c9-accent);background:transparent;border:0}
+.clean9-rules-target,.clean9-rules-size,.clean9-rules-muted{font-size:10.5px;color:var(--c9-mute);white-space:nowrap}
+.clean9-rules-ops{white-space:nowrap}
+.clean9-ops-inline{display:inline-flex;align-items:center;gap:4px;white-space:nowrap;vertical-align:middle}
+.clean9-ops-inline button{padding:2px 8px;font-size:10.5px;line-height:18px}
+.clean9-rules-editor{min-width:0;display:flex;flex-direction:column;gap:8px;border:1px solid var(--c9-line);border-radius:9px;background:var(--c9-bg);padding:12px}
+.clean9-rules-editor-meta{display:flex;gap:6px;flex-wrap:wrap}
+.clean9-rules-editor-meta input{flex:1 1 140px;min-width:0}
+.clean9-rules-area{flex:1;min-height:220px;resize:vertical;font-family:var(--xsdsh-font-ui);font-size:12px;line-height:1.6}
+.clean9-rules-save{display:flex;gap:8px;align-items:center}
+.clean9-rules-empty{margin:0;padding:10px;color:var(--c9-mute);font-size:11.5px;text-align:center}
+.clean9-rules-foot{min-height:44px;display:flex;align-items:flex-start}
+.clean9-rules-foot .clean9-notice{margin:0;flex:1}
+
+.clean9-skills{display:flex;flex-direction:column;gap:10px;min-height:0}
+.clean9-skills-toolbar{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.clean9-skills-toolbar input{flex:1 1 200px;min-width:0}
+.clean9-skills-table{table-layout:fixed}
+/* 列宽与 <colgroup> 对齐：名称 34%，描述吃剩余宽度，调用方式/大小/操作固定。 */
+.clean9-skills-table th:nth-child(2){width:auto}
+.clean9-skills-table th:nth-child(3){width:104px}
+.clean9-skills-table th:nth-child(4){width:64px}
+.clean9-skills-table th:nth-child(5){width:48px}
+.clean9-skills-table th,.clean9-skills-table td{padding:5px 8px;vertical-align:middle;white-space:nowrap}
+.clean9-skills-desc{color:var(--c9-mute);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.clean9-skills-call{white-space:nowrap}
+.clean9-call-chips{display:inline-flex;align-items:center;gap:4px;white-space:nowrap;vertical-align:middle}
+.clean9-skills-gate{padding:16px;border:1px dashed var(--c9-line);border-radius:9px;color:var(--c9-mute);font-size:12px}
+
+/* ── Skill 表：图标按钮 / 调用徽章 / 整行可点 ───────────────────── */
+.clean9-rules-row.is-clickable{cursor:pointer}
+.clean9 .clean9-icon-btn{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;
+  padding:0;border:1px solid var(--c9-line);border-radius:7px;background:var(--c9-bg);color:var(--c9-mute)}
+.clean9 .clean9-icon-btn:hover:not(:disabled){color:var(--xsdsh-bad);border-color:var(--xsdsh-bad-line,rgba(208,36,26,.28));
+  background:var(--xsdsh-bad-soft,rgba(208,36,26,.10))}
+.clean9 .clean9-icon-btn:disabled{opacity:.45;cursor:not-allowed}
+.clean9-call{display:inline-block;padding:0 6px;border-radius:999px;font-size:10px;line-height:18px;
+  border:1px solid var(--c9-line);color:var(--c9-mute);background:var(--c9-soft)}
+.clean9-call.is-on{color:var(--xsdsh-ok);border-color:color-mix(in srgb,var(--xsdsh-ok) 35%,transparent);
+  background:color-mix(in srgb,var(--xsdsh-ok) 10%,transparent)}
+.clean9-skills-table td{height:36px}
+
+/* ── 自己的服务器：给表格留出高度，不再压成一条 ─────────────────── */
+.clean9-own{display:flex;flex-direction:column;gap:10px;min-height:min(42vh,340px)}
+.clean9-own-scroll{flex:1;min-height:140px;overflow:auto;overscroll-behavior:contain;
+  border:1px solid var(--c9-line);border-radius:9px;background:var(--c9-bg)}
+.clean9-own-table th{position:sticky;top:0;z-index:1;background:var(--c9-soft);padding:6px 8px}
+.clean9-own-table td{padding:5px 8px}
+
+/* ── 短内容弹窗：宽度贴合内容，底部不留空 ──────────────────────── */
+.clean9-dialog--compact{width:min(560px,100%)}
+.clean9-dialog--compact .clean9-dialog-body{padding:16px 18px 18px}
+.clean9-dialog--compact .clean9-dialog-body p:last-child{margin-bottom:0}
+.clean9-dialog--medium{width:min(760px,100%)}
+
+/* Esc 回焦时不留「选中框」；真正的键盘焦点环改内描边，不会被面板裁掉 */
+.clean9 .is-focus-returned:focus-visible{outline:none}
+.clean9 .clean9-tile:focus-visible{outline-offset:-3px}
+/* 窄屏上下堆叠时，容器固定高度会均分给两行；改成各自保底高度。 */
+@media(max-width:700px){
+  .clean9-rules-body{height:auto;min-height:auto}
+  .clean9-rules-list{min-height:200px}
+  .clean9-rules-editor{min-height:260px}
+  .clean9-rules-create-fields{grid-template-columns:1fr}
+  /* 窄窗里保留固定列，但收窄调用/大小/操作，给描述留出可读宽度。 */
+  .clean9-skills-table col:nth-child(3){width:96px!important}
+  .clean9-skills-table col:nth-child(4){width:56px!important}
+  .clean9-skills-table col:nth-child(5){width:44px!important}
+}
+/* 极窄窗（约手机宽度）先保名称和操作：次要列隐藏，避免固定列把名称挤成 0。 */
+@media(max-width:520px){
+  /* 用零宽 + visibility 保留列映射；display:none 会让后续单元格错位到隐藏列。 */
+  .clean9-rules-table:not(.clean9-skills-table) th:nth-child(3),.clean9-rules-table:not(.clean9-skills-table) td:nth-child(3),
+  .clean9-rules-table:not(.clean9-skills-table) th:nth-child(4),.clean9-rules-table:not(.clean9-skills-table) td:nth-child(4),
+  .clean9-skills-table th:nth-child(2),.clean9-skills-table td:nth-child(2){width:0!important;padding:0!important;visibility:hidden}
+  .clean9-rules-table:not(.clean9-skills-table) th:nth-child(2){width:72px}
+  .clean9-rules-table:not(.clean9-skills-table) th:nth-child(5){width:116px}
+  .clean9-skills-table col:nth-child(1){width:auto!important}
+  .clean9-skills-table col:nth-child(2){width:0!important}
+}

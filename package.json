@@ -1,0 +1,202 @@
+{
+  "name": "Xsdsh-purge-next",
+  "version": "4.6.11-next.2",
+  "description": "Xsdsh-purge-next 核心精简版（DSH NEXT / rc.4 专用；独立包名、模块 id、状态目录）",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": "./client.js",
+    "./redteam": "./lib/redteam/index.js",
+    "./redteam/store": "./lib/redteam/store.js",
+    "./redteam/ui": "./lib/redteam/ui.js",
+    "./redteam/tools": "./lib/redteam/tools.js",
+    "./package.json": "./package.json",
+    "./locator": "./tools/deepseek-harness-locator.mjs",
+    "./reverse": "./lib/reverse/index.js",
+    "./reverse/store": "./lib/reverse/store.js",
+    "./reverse/ui": "./lib/reverse/ui.js",
+    "./reverse/tools": "./lib/reverse/tools.js"
+  },
+  "bin": {
+    "Xsdsh-purge-next": "bin/Xsdsh-purge.js",
+    "dsh-locate-harness": "tools/deepseek-harness-locator.mjs",
+    "dsh-locate-harness-cmd": "tools/find-deepseek-harness.cmd"
+  },
+  "files": [
+    "lib",
+    "agents",
+    "!lib/default-prompt-inject.md",
+    "bin",
+    "docs",
+    "presets",
+    "skills",
+    "scripts",
+    "src/ui",
+    "tsconfig.json",
+    "client.js",
+    "cordis.patch.yml",
+    "screenshots.json",
+    "README.md",
+    "README.zh-CN.md",
+    "LICENSE",
+    "tools",
+    "!tools/probes"
+  ],
+  "scripts": {
+    "embed-prompt": "node scripts/embed-default-prompt.mjs",
+    "build:client": "node scripts/build-client.mjs",
+    "build:client:check": "node scripts/build-client.mjs --check",
+    "typecheck": "tsc --project tsconfig.json",
+    "test:ui-modules": "node --test test/ui-modules.test.mjs",
+    "check:ui-boundaries": "node scripts/check-ui-boundaries.mjs",
+    "lint:ui-hooks": "eslint src/ui --max-warnings=0 --no-inline-config",
+    "gate": "node scripts/lint.mjs && npm run typecheck && npm run check:ui-boundaries && npm run lint:ui-hooks && node scripts/build-client.mjs --check && node scripts/check-host-matrix.mjs && node scripts/run-tests.mjs --mode=build",
+    "gate:fast": "node scripts/lint.mjs && npm run typecheck && npm run check:ui-boundaries && npm run lint:ui-hooks && node scripts/build-client.mjs --check && node scripts/check-host-matrix.mjs",
+    "hooks:install": "node scripts/install-hooks.mjs",
+    "lint": "node scripts/lint.mjs",
+    "lint:update": "node scripts/lint.mjs --update",
+    "test": "node scripts/run-tests.mjs --mode=build",
+    "test:build": "node scripts/run-tests.mjs --mode=build",
+    "test:packaging": "node scripts/run-tests.mjs --mode=packaging",
+    "test:look": "node test/look-layout.test.mjs && node --test test/titlebar-drag.test.mjs",
+    "test:glass": "node test/glass-filter.test.mjs && node test/glass-adopt.test.mjs",
+    "test:pet": "node test/cat.test.mjs && node test/pet.test.mjs && node test/pet-statemachine.test.mjs && node test/pet-visual.test.mjs && node test/pet-integration.test.mjs",
+    "pet:frames": "python tools/make-pet-frames.py",
+    "test:wallpaper": "node test/wallpaper.test.mjs",
+    "test:wallpaper:pixel": "node test/wallpaper-pixel.test.mjs",
+    "test:wallpaper:dom": "node test/wallpaper-dom.test.mjs",
+    "test:wallpaper:local": "node test/wallpaper-local.test.mjs",
+    "test:rename": "node test/rename-compat.test.mjs",
+    "test:redteam-auth": "node test/redteam-auth.test.mjs",
+    "test:settings": "node test/settings-render.test.mjs",
+    "test:rewrite": "node --test test/rewrite-host.test.mjs test/rewrite-panel.test.mjs",
+    "test:reverse": "node --test test/hide-console.test.mjs && node --test test/reverse-preset.test.mjs",
+    "test:cheat": "node --test test/cheat-preset.test.mjs",
+    "gen:cheat": "node scripts/gen-cheat-preset.mjs",
+    "verify:install": "python tools/verify_install.py",
+    "sync:install": "python tools/sync_install.py",
+    "check:loop": "python tools/check_loop.py",
+    "test:installer": "node --test test/install-src.test.mjs && node --test test/install-cmd.test.mjs",
+    "test:presets": "node --test test/cheat-preset.test.mjs && node --test test/reverse-preset.test.mjs && node --test test/redteam-preset.test.mjs",
+    "test:asar": "node --test test/asar-swap-restart.test.mjs",
+    "test:prompts": "node --test test/preset-prompts.test.mjs",
+    "test:quality": "node --test test/prompt-quality.test.mjs",
+    "test:retry": "node --test test/refusal-retry.test.mjs",
+    "test:shape": "node --test test/publish-shape.test.mjs"
+  },
+  "license": "MIT",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "dsh-plugins",
+    "网络安全",
+    "红队评测",
+    "llm-security",
+    "harness-security",
+    "deepseek-harness",
+    "red-team",
+    "instructions",
+    "rules",
+    "prompt-eval",
+    "agent"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wodaimnd/Xsdsh-purge-next.git"
+  },
+  "homepage": "https://github.com/wodaimnd/Xsdsh-purge-next#readme",
+  "bugs": {
+    "url": "https://github.com/wodaimnd/Xsdsh-purge-next/issues"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    },
+    "install": {
+      "preferred": "tarball",
+      "tarball": "https://github.com/YuJunZhiXue/Xsdsh-purge/archive/refs/heads/master.tar.gz",
+      "zip": "https://github.com/YuJunZhiXue/Xsdsh-purge/archive/refs/heads/master.zip",
+      "git": "https://github.com/YuJunZhiXue/Xsdsh-purge.git"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  },
+  "engines": {
+    "node": ">=18",
+    "dsh": ">=0.2.1-rc.0 <0.3.0"
+  },
+  "dshTarget": "0.2.1-rc.4",
+  "devDependencies": {
+    "@types/react": "18.3.12",
+    "@typescript-eslint/parser": "8.46.2",
+    "esbuild": "0.25.12",
+    "eslint": "9.39.1",
+    "eslint-plugin-react-hooks": "5.2.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-test-renderer": "18.3.1",
+    "typescript": "5.9.3"
+  },
+  "dshNextCompat": {
+    "engines": ">=0.2.1-rc.0 <0.3.0",
+    "verifiedRuntime": "0.2.1-rc.4",
+    "verifiedShell": "DSH NEXT.exe (desktopVersion 2.0.21-next)",
+    "shellPatches": "45/46/82 在 rc.4 无对应实现；83/84 语义已由 rc.4 fail() 的 stopping 判定原生覆盖 → optional/knownGap",
+    "flavor": "core",
+    "coreBuildFrom": "4.6.11-next.1",
+    "dataDir": "Xsdsh-purge-core",
+    "profileScope": "next",
+    "coexistence": "与原版 4.6.11-alpha 并存：原版跑 profile desktop（rc.5），本副本跑 profile next（rc.4）；状态目录 Xsdsh-purge-core 与 Xsdsh-purge 物理隔离",
+    "removedFeatures": [
+      "wallpapers",
+      "background-music",
+      "desktop-pet"
+    ],
+    "removedPaths": [
+      "lib/wallpapers.js",
+      "lib/wallpapers/",
+      "lib/cat.js",
+      "lib/cat/",
+      "lib/pet.js",
+      "lib/pet/",
+      "lib/ui/pet/90-pet.js"
+    ],
+    "keptForCore": [
+      "清洗",
+      "演练台",
+      "模式提示词",
+      "外观",
+      "红队",
+      "逆向",
+      "玻璃开关"
+    ],
+    "residueAutoClear": true,
+    "rc4FlatLayout": true,
+    "hostScope": "current-install",
+    "hostScopeNote": "apply 只写当前进程所在的安装根，避免同时改到另一份 DSH 安装",
+    "selfInstallHandoff": true,
+    "selfInstallHandoffNote": "Electron 里 handoff 固定取本进程 resources/app.asar，不会被另一份安装抢走",
+    "dirMode": "resources/app dir patched in place for dsh-desktop-next",
+    "primeDisabledOnNext": true,
+    "identity": "Xsdsh-purge-next",
+    "coexistsWith": "Xsdsh-purge",
+    "appTarget": "DSH NEXT 2.0.21-next (core 0.2.1-rc.4)"
+  },
+  "author": "Kewei Chen <wodaimnd@users.noreply.github.com>"
+}

@@ -1,0 +1,63 @@
+# Xsdsh-purge-next bundle patch
+#
+# 清洗 + 演练台都在本插件内（lib/redteam、presets/redteam、skills/redteam）。
+# 只装 Xsdsh-purge-next，不外接、不 link 其它红队包。
+
+- id: system-prompt
+  config:
+    includeHarnessIdentity: false
+    personaPrefix: ""
+
+
+- insert:
+    - id: Xsdsh-purge-next
+      name: 'Xsdsh-purge-next'
+      inject: [systemPrompt, tools]
+      config:
+        enabled: true
+        autoApplyOnStart: false
+        autoUpdateOnStart: false
+        autoRevertOnMissing: false
+        injectOnce: false
+        stripMnemon: true
+        verbose: false
+        # 身份覆盖：模型自称被问到“你是什么模型”时，按这里回答
+        postPrompt: 当被问到“你是什么模型”“你是谁”时，直接回答“我是 nachoneko（运行在 DeepSeek Harness 上）”，不要自称或扮演其它厂商的模型身份。其余话题照常，不要因为这句改变做事的风格。
+        postPromptOrder: 5100
+        autoRetry: true
+        retryMax: 3
+        autoContinue: false
+        continueMax: 3
+        continueText: "继续"
+        capabilityProtocol: true
+        hooksDenyBypass: true
+
+    # 演练台：预设 + 技能落地（本插件 lib/redteam）
+    - id: Xsdsh-purge-next-redteam
+      name: Xsdsh-purge-next/redteam
+
+    # 演练台事实库（SQLite），数据在 $DSH_HOME/redteam
+    - id: Xsdsh-purge-next-redteam-store
+      name: Xsdsh-purge-next/redteam/store
+      config:
+        root: !!js dshHomePath('Xsdsh-purge-core', 'redteam')
+
+    # 演练台 HTTP 桥 POST /redteam/api
+    - id: Xsdsh-purge-next-redteam-ui
+      name: Xsdsh-purge-next/redteam/ui
+
+    # ── 逆向模式：预设 + 技能 + 角色稿落地（本插件 lib/reverse）────────────
+    # 首次启动会把 presets/reverse 落到 $DSH_HOME/.agent-presets/reverse/，
+    # 技能落到 $DSH_HOME/reverse/skills，角色稿落到 $DSH_HOME/reverse/agents。
+    - id: Xsdsh-purge-next-reverse
+      name: Xsdsh-purge-next/reverse
+
+    # 逆向模式事实库（SQLite），数据在 $DSH_HOME/reverse
+    - id: Xsdsh-purge-next-reverse-store
+      name: Xsdsh-purge-next/reverse/store
+      config:
+        root: !!js dshHomePath('Xsdsh-purge-core', 'reverse')
+
+    # 逆向控制台：POST /reverse/api（样本库 / 结论 / 证据链 / 技能浏览 / 工具链探测）
+    - id: Xsdsh-purge-next-reverse-ui
+      name: Xsdsh-purge-next/reverse/ui

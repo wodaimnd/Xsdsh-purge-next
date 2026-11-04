@@ -1,0 +1,53 @@
+.xsdsh-cat-page{color:var(--xsdsh-ink);padding:0;min-width:0;font-size:13px;display:flex;flex-direction:column;height:100%;min-height:0;overflow:hidden}
+.xsdsh-cat-page *{box-sizing:border-box}
+.xsdsh-cat-page h2{margin:0;font-size:16px}
+.xsdsh-cat-page h3{margin:0 0 6px;font-size:13px}
+.xsdsh-cat-page header{flex:none}
+.xsdsh-cat-page p{color:var(--xsdsh-mute);line-height:1.6;margin:4px 0 8px;font-size:11.5px}
+.xsdsh-cat-page .xsdsh-cat-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;flex:1;min-height:0;align-content:start}
+.xsdsh-cat-page .xsdsh-cat-card{border:1px solid var(--xsdsh-line);border-radius:10px;background:var(--xsdsh-panel2);padding:10px;min-width:0}
+.xsdsh-cat-page button,.xsdsh-cat-page input:not([type=range]):not([type=checkbox]){border:1px solid var(--xsdsh-line);background:var(--xsdsh-panel,#fff);color:var(--xsdsh-ink);border-radius:8px;font:inherit;padding:5px 9px;min-width:0}
+.xsdsh-cat-page button{cursor:pointer;transition:background .15s var(--xsdsh-ease),border-color .15s var(--xsdsh-ease)}
+.xsdsh-cat-page button:hover:not(:disabled){background:var(--xsdsh-hover);border-color:var(--xsdsh-line-hover)}
+.xsdsh-cat-page button[aria-pressed=true]{border-color:var(--xsdsh-accent);background:var(--xsdsh-accent-soft);color:var(--xsdsh-accent)}
+.xsdsh-cat-page button:disabled,.xsdsh-cat-page input:disabled{opacity:.45;cursor:not-allowed}
+.xsdsh-cat-page :focus-visible{outline:2px solid var(--xsdsh-accent);outline-offset:2px}
+.xsdsh-cat-page input{accent-color:var(--xsdsh-accent)}
+.xsdsh-cat-page .xsdsh-cat-swatches{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.xsdsh-cat-page .xsdsh-cat-swatches button{padding:3px;overflow:hidden;min-height:62px;overflow-wrap:anywhere;font-size:10.5px;line-height:1.3}
+.xsdsh-cat-page .xsdsh-cat-swatches img,.xsdsh-cat-page .xsdsh-cat-swatches video{width:100%;height:44px;object-fit:cover;border-radius:4px;display:block;margin-bottom:4px}
+.xsdsh-cat-page .xsdsh-cat-local{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0;align-items:end}
+.xsdsh-cat-page .xsdsh-cat-local label{flex:1 1 100%;display:grid;gap:4px;color:var(--xsdsh-mute);font-size:11px}
+.xsdsh-cat-page .xsdsh-cat-local input{width:100%}
+.xsdsh-cat-page .xsdsh-cat-tunes{display:grid;gap:6px}
+.xsdsh-cat-page .xsdsh-cat-tunes label{display:grid;grid-template-columns:84px minmax(40px,1fr) 44px;gap:6px;align-items:center;font-size:11.5px}
+.xsdsh-cat-page .xsdsh-cat-tunes input{width:100%;min-width:0}
+.xsdsh-cat-page output{text-align:right;font-variant-numeric:tabular-nums;color:var(--xsdsh-mute);font-size:11.5px}
+.xsdsh-cat-page .xsdsh-cat-pet-preview{display:flex;align-items:center;gap:10px;background:var(--xsdsh-panel2);border-radius:8px;padding:8px;margin:8px 0;font-size:11.5px}
+.xsdsh-cat-page .xsdsh-cat-pet-preview img{width:56px;height:56px;object-fit:contain}
+.xsdsh-cat-page .xsdsh-cat-row{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin:6px 0;font-size:11.5px}
+.xsdsh-cat-page .xsdsh-cat-volume{display:flex;align-items:center;gap:6px;flex:1;min-width:140px;white-space:nowrap}
+.xsdsh-cat-page .xsdsh-cat-volume output{flex:none}
+.xsdsh-cat-page .xsdsh-cat-volume input{min-width:40px;width:100%}
+.xsdsh-cat-page .xsdsh-cat-notice{min-height:18px;margin:4px 0 0;overflow-wrap:anywhere;flex:none;font-size:11px}
+.xsdsh-cat-page .xsdsh-cat-notice[data-bad]{color:var(--xsdsh-bad)}
+@container (max-width:900px){.xsdsh-cat-page .xsdsh-cat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.xsdsh-cat-page .xsdsh-cat-card:first-child{grid-row:span 2}}
+@container (max-width:560px){.xsdsh-cat-page .xsdsh-cat-grid{grid-template-columns:minmax(0,1fr)}}
+/* 矮窗口：说明段让位，壁纸与滑杆再收紧一档。 */
+@media (max-height:700px){
+  .xsdsh-cat-page .xsdsh-cat-card>p{display:none}
+  .xsdsh-cat-page .xsdsh-cat-swatches button{min-height:54px}
+  .xsdsh-cat-page .xsdsh-cat-swatches img,.xsdsh-cat-page .xsdsh-cat-swatches video{height:36px}
+  .xsdsh-cat-page .xsdsh-cat-tunes{gap:4px}
+  .xsdsh-cat-page .xsdsh-cat-pet-preview img{width:48px;height:48px}
+}
+@media (max-height:580px){
+  .xsdsh-cat-page .xsdsh-cat-pet-preview{display:none}
+  .xsdsh-cat-page .xsdsh-cat-tunes{gap:2px}
+  .xsdsh-cat-page .xsdsh-cat-swatches button{min-height:46px}
+  .xsdsh-cat-page .xsdsh-cat-swatches img,.xsdsh-cat-page .xsdsh-cat-swatches video{height:30px}
+}
+/* 极端小窗（高 ≤520 或 宽 ≤440）：内容放不下，允许外层滚动而不是裁切。 */
+@media (max-height:520px),(max-width:440px){
+  .xsdsh-cat-page{height:auto;overflow:visible}
+}

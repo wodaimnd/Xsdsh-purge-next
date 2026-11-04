@@ -1,0 +1,41 @@
+.xsdsh-prompts-page{position:relative;min-width:0;padding:0;color:var(--xsdsh-ink);font-size:13px;display:flex;flex-direction:column;height:100%;min-height:0;overflow:hidden}
+.xsdsh-prompts-page *{box-sizing:border-box}
+.xsdsh-prompts-page h2{font-size:16px;margin:0}
+.xsdsh-prompts-page h3{font-size:13px;margin:0}
+.xsdsh-prompts-page p{line-height:1.6;color:var(--xsdsh-mute);margin:4px 0;font-size:11.5px}
+.xsdsh-prompts-page .xsdsh-prompts-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px;flex:none}
+.xsdsh-prompts-page .xsdsh-prompts-heading p{margin:4px 0 0}
+.xsdsh-prompts-page button{border:1px solid var(--xsdsh-line);background:var(--xsdsh-panel,#fff);color:var(--xsdsh-ink);border-radius:8px;padding:6px 11px;font:inherit;font-size:12.5px;cursor:pointer;transition:background .15s var(--xsdsh-ease),border-color .15s var(--xsdsh-ease)}
+.xsdsh-prompts-page button:hover:not(:disabled){background:var(--xsdsh-hover);border-color:var(--xsdsh-line-hover)}
+.xsdsh-prompts-page button:disabled{opacity:.45;cursor:not-allowed}
+.xsdsh-prompts-page :focus-visible{outline:2px solid var(--xsdsh-accent);outline-offset:2px}
+.xsdsh-prompts-page .xsdsh-prompts-layout{display:grid;grid-template-columns:220px minmax(0,1fr);gap:12px;flex:1;min-height:0}
+.xsdsh-prompts-page .xsdsh-prompts-modes{display:grid;gap:6px;align-content:start;min-height:0;overflow:hidden}
+.xsdsh-prompts-page .xsdsh-prompts-modes button{text-align:left;display:grid;gap:4px;padding:8px 10px}
+.xsdsh-prompts-page .xsdsh-prompts-modes button[aria-current=page]{border-color:var(--xsdsh-accent);background:var(--xsdsh-accent-soft);color:var(--xsdsh-accent)}
+.xsdsh-prompts-page .xsdsh-prompts-modes span{font-size:11px;color:var(--xsdsh-mute)}
+.xsdsh-prompts-page .xsdsh-prompts-workspace{min-width:0;min-height:0;display:flex;flex-direction:column}
+.xsdsh-prompts-page .xsdsh-prompts-editor-head{display:flex;gap:10px;justify-content:space-between;align-items:center;flex-wrap:wrap;flex:none}
+.xsdsh-prompts-page .xsdsh-prompts-editor-head span,.xsdsh-prompts-page .xsdsh-prompts-meta{font-size:11px;color:var(--xsdsh-mute);overflow-wrap:anywhere;flex:none}
+.xsdsh-prompts-page .xsdsh-prompts-note{background:var(--xsdsh-warn-soft);border:1px solid var(--xsdsh-warn-line);color:var(--xsdsh-warn);border-radius:8px;padding:6px 9px;font-size:11.5px;flex:none}
+.xsdsh-prompts-page textarea{width:100%;flex:1;min-height:120px;resize:none;border:1px solid var(--xsdsh-line);background:var(--xsdsh-inset,var(--xsdsh-panel2));color:var(--xsdsh-ink);border-radius:8px;padding:9px 11px;font:12px/1.75 var(--xsdsh-font-ui,"Segoe UI","Microsoft YaHei",sans-serif);tab-size:2}
+.xsdsh-prompts-page textarea:disabled{opacity:.65}
+.xsdsh-prompts-page .xsdsh-prompts-actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:8px;flex:none}
+.xsdsh-prompts-page .xsdsh-prompts-actions>span{margin-left:auto;font-size:11px;color:var(--xsdsh-mute)}
+.xsdsh-prompts-page .xsdsh-prompts-primary{background:var(--xsdsh-accent-soft);border-color:var(--xsdsh-accent);color:var(--xsdsh-accent)}
+.xsdsh-prompts-page .xsdsh-prompts-primary:hover:not(:disabled){background:var(--xsdsh-accent-bg)}
+.xsdsh-prompts-page .xsdsh-prompts-error{color:var(--xsdsh-bad);overflow-wrap:anywhere;flex:none}
+.xsdsh-prompts-page .xsdsh-prompts-status{min-height:18px;overflow-wrap:anywhere;flex:none;font-size:11px}
+.xsdsh-prompts-page .xsdsh-prompts-shade{position:absolute;inset:0;z-index:10;display:flex;align-items:flex-start;justify-content:center;padding:40px 16px;background:var(--xsdsh-overlay);border-radius:12px;overflow:auto}
+.xsdsh-prompts-page .xsdsh-prompts-confirm{width:100%;max-width:440px;background:var(--xsdsh-panel);border:1px solid var(--xsdsh-line);border-radius:12px;padding:18px;box-shadow:var(--xsdsh-shadow-menu)}
+@media(max-width:720px){
+  .xsdsh-prompts-page .xsdsh-prompts-layout{grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(0,1fr)}
+  .xsdsh-prompts-page .xsdsh-prompts-modes{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .xsdsh-prompts-page .xsdsh-prompts-modes button{padding:7px 9px}
+}
+/* 极端小窗（高 ≤520 或 宽 ≤440）：内容放不下时允许外层滚动，不裁切。 */
+@media (max-height:520px),(max-width:440px){
+  .xsdsh-prompts-page{height:auto;overflow:visible}
+  .xsdsh-prompts-page .xsdsh-prompts-layout{flex:none}
+  .xsdsh-prompts-page textarea{flex:none;min-height:160px}
+}

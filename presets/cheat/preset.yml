@@ -1,0 +1,3 @@
+name: 外挂制作模式
+description: 从零做外挂：给一个游戏 / 进程 / 包名即可拉起制作流程。覆盖反作弊机制逆向（ACE / BattlEye / EAC / GameGuard / XignCode3 / 腾讯 TP / 网易反作弊）、内存读写与多级偏移、注入与 HOOK、驱动读写与 BYOVD、D3D 透视叠加、自瞄与输入模拟、移动端 Frida / Zygisk，复用逆向模式的五角色并发与证据库。
+order: 12

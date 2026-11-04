@@ -1,0 +1,51 @@
+{
+ "version": 1,
+ "note": "client.js 的拼装清单：按 parts 顺序拼接，产物逐字节写到 client.js。要改 client.js 就改这里的片段，然后 npm run build:client。演练台由 drillModule \"Drill\" 从 src/ui/features/drill 编译；lib/redteam/client.js 是历史源，不参与拼装。顺序有意义——顶层 const 有 TDZ，调用不能跑到声明前面。core 精简版：已移除 lib/ui/pet/90-pet.js（桌宠）。",
+ "parts": [
+  {
+   "file": "lib/ui/shell/00-loader.js"
+  },
+  {
+   "module": "src/ui/client-modules.ts"
+  },
+  {
+   "file": "lib/ui/shell/10-core.js"
+  },
+  {
+   "file": "lib/ui/shell/20-locale.js"
+  },
+  {
+   "file": "lib/ui/shell/30-css.js"
+  },
+  {
+   "file": "lib/ui/look/40-look.js"
+  },
+  {
+   "file": "lib/ui/clean/50-primitives.js"
+  },
+  {
+   "file": "lib/ui/clean/60-settings.js"
+  },
+  {
+   "file": "lib/ui/rewind/70-rewind.js"
+  },
+  {
+   "drillModule": "Drill"
+  },
+  {
+   "file": "lib/ui/drill/80-auth.js"
+  },
+  {
+   "file": "lib/ui/shell/87-integration.js"
+  },
+  {
+   "file": "lib/ui/shell/88-dock.js"
+  },
+  {
+   "file": "lib/ui/rewind/95-install.js"
+  },
+  {
+   "file": "lib/ui/shell/99-apply.js"
+  }
+ ]
+}
