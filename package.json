@@ -1,6 +1,6 @@
 {
   "name": "xsdsh-purge-next",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "dsh破甲 核心精简版（DSH NEXT / rc.4 专用；独立包名、模块 id、状态目录）",
   "type": "module",
   "main": "lib/index.js",
@@ -265,7 +265,8 @@
     "upstreamPending": [],
     "forkedFrom": "https://github.com/YuJunZhiXue/Xsdsh-purge",
     "forkNote": "fork 自 YuJunZhiXue/Xsdsh-purge；包名小写化以符合 npm 规范，安装与状态目录沿用原标识",
-    "forkVersionOrigin": "4.6.12-next.2"
+    "forkVersionOrigin": "4.6.12-next.2",
+    "versionNote": "1.0.0 曾在 npm 上 staged 但未完成（E409 无法覆盖），首版改用 1.0.1"
   },
   "author": "Kewei Chen <wodaimnd@users.noreply.github.com>",
   "contributors": [
