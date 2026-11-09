@@ -1,4 +1,4 @@
-window.__ModuleLoader__.load({ id: "Xsdsh-purge-next", factory: (require) => {
+window.__ModuleLoader__.load({ id: "xsdsh-purge-next", factory: (require) => {
 
 		var module = { exports: {} };
 		var exports = module.exports;
@@ -324,7 +324,7 @@ function AppShell(props) {
     if (event.target.closest("button,a,input,select,textarea,label")) return;
     props.onDragStart?.(event);
   };
-  return /* @__PURE__ */ h("div", { ref: props.rootRef, className: "purge-app", "data-xsdsh-ui": "app", hidden: props.open === false, style: { ...props.style, ...NO_DRAG } }, /* @__PURE__ */ h("style", null, APP_SHELL_CSS), /* @__PURE__ */ h("header", { className: "purge-app__header", style: NO_DRAG, onPointerDown: header }, /* @__PURE__ */ h("div", { className: "purge-app__brand", style: NO_DRAG, title: props.onDragStart ? "按住拖动面板" : void 0 }, /* @__PURE__ */ h("strong", null, "Xsdsh-purge-next"), props.version && /* @__PURE__ */ h("span", { className: "purge-app__version" }, props.version)), /* @__PURE__ */ h("button", { type: "button", className: "purge-app__button", onClick: props.onClose }, "收起")), /* @__PURE__ */ h(NavigationTabs, { id, label: "Xsdsh-purge-next 功能", tabs: APP_TABS, value: props.tab, onChange: props.onTabChange }), /* @__PURE__ */ h(
+  return /* @__PURE__ */ h("div", { ref: props.rootRef, className: "purge-app", "data-xsdsh-ui": "app", hidden: props.open === false, style: { ...props.style, ...NO_DRAG } }, /* @__PURE__ */ h("style", null, APP_SHELL_CSS), /* @__PURE__ */ h("header", { className: "purge-app__header", style: NO_DRAG, onPointerDown: header }, /* @__PURE__ */ h("div", { className: "purge-app__brand", style: NO_DRAG, title: props.onDragStart ? "按住拖动面板" : void 0 }, /* @__PURE__ */ h("strong", null, "dsh破甲"), props.version && /* @__PURE__ */ h("span", { className: "purge-app__version" }, props.version)), /* @__PURE__ */ h("button", { type: "button", className: "purge-app__button", onClick: props.onClose }, "收起")), /* @__PURE__ */ h(NavigationTabs, { id, label: "dsh破甲 功能", tabs: APP_TABS, value: props.tab, onChange: props.onTabChange }), /* @__PURE__ */ h(
     "div",
     {
       className: `purge-app__body${props.tab === "drill" ? " purge-app__body--drill" : ""}`,
@@ -8408,9 +8408,9 @@ function IntegratedApp(props) {
   return module.exports;
 })();
 /* __XSDSH_UI_MODULES_END__ */
-		const name = "Xsdsh-purge-next";
+		const name = "dsh破甲";
 		const inject = ["slots", "locale"];
-		const NS = "settings.Xsdsh-purge-next";
+		const NS = "settings.dsh破甲";
 		let translate = (key) => key;
 		function useT() {
 			return translate;
@@ -8593,9 +8593,9 @@ function IntegratedApp(props) {
 			"prompts.reset": "已恢复默认，重启后生效",
 			"prompts.restartNote": "提示词是启动时读进系统提示词的，所以保存完要完全退出并重启 DeepSeek Harness 才会生效。保存的是一份覆盖文件，包升级后默认值会跟着升级，你改过的不会丢。",
 			"rewrite.failed": "改写这不成了",
-			"dock.toggle": "Xsdsh-purge-next-4.6.11-alpha",
-			"dock.newSession": "Xsdsh-purge-next-4.6.11-alpha",
-			"dock.inSession": "Xsdsh-purge-next-4.6.11-alpha",
+			"dock.toggle": "打开面板",
+			"dock.newSession": "打开破甲面板",
+			"dock.inSession": "当前会话",
 			"dock.redteam": "红队猫模式",
 			"dock.full": "全看一遍",
 			"dock.close": "揣起来",
@@ -9085,9 +9085,9 @@ function IntegratedApp(props) {
 			"prompts.reset": "Restored. Takes effect after restart.",
 			"prompts.restartNote": "The prompt is read into the system prompt at startup, so a full quit and restart of DeepSeek Harness is required. Your edit is stored as an override file, so package upgrades update the default without losing your custom text.",
 			"rewrite.failed": "Rewrite failed",
-			"dock.toggle": "Xsdsh-purge-next-4.6.11-alpha",
-			"dock.newSession": "Xsdsh-purge-next-4.6.11-alpha",
-			"dock.inSession": "Xsdsh-purge-next-4.6.11-alpha",
+			"dock.toggle": "Open panel",
+			"dock.newSession": "Open panel",
+			"dock.inSession": "This session",
 			"dock.redteam": "Red team",
 			"dock.full": "Full view",
 			"dock.close": "Collapse",
@@ -9694,9 +9694,8 @@ body[data-ds-dark-theme] .xsdsh-restart-card .xsdsh-btn-primary,body[data-ds-dar
 
 .xsdsh-dock{position:fixed;top:12px;right:12px;z-index:10050;display:flex;flex-direction:column;width:var(--xsdsh-dock-w,620px);height:var(--xsdsh-dock-h,72vh);min-width:380px;min-height:320px;max-width:calc(100vw - 16px);max-height:calc(100vh - 16px);box-sizing:border-box;background:color-mix(in srgb,var(--dsw-alias-bg-layer-1,var(--xsdsh-paper,#1c1c1c)) 52%,transparent);backdrop-filter:blur(22px) saturate(1.35);-webkit-backdrop-filter:blur(22px) saturate(1.35);border:1px solid color-mix(in srgb,var(--dsw-alias-border-l1,var(--xsdsh-line,#555)) 65%,transparent);border-radius:12px;box-shadow:0 18px 48px color-mix(in srgb,#000 30%,transparent),0 0 0 1px color-mix(in srgb,#fff 6%,transparent);pointer-events:auto;color:var(--dsw-alias-label-primary,var(--xsdsh-ink,#f2f2f2));overflow:visible}
 .xsdsh-dock[data-open="0"]{display:none}
-.xsdsh-launch{position:fixed;right:16px;bottom:16px;z-index:10040;appearance:none;display:inline-flex;align-items:center;gap:6px;height:36px;padding:0 14px;border:1px solid color-mix(in srgb,var(--dsw-alias-brand-primary,#6dbf8c) 55%,transparent);border-radius:999px;background:color-mix(in srgb,var(--dsw-alias-bg-layer-1,#1c1c1c) 72%,transparent);color:var(--dsw-alias-label-primary,#f2f2f2);cursor:pointer;font-family:inherit;font-size:13px;line-height:1;box-shadow:0 8px 22px color-mix(in srgb,#000 28%,transparent);pointer-events:auto}
+.xsdsh-launch{position:fixed;z-index:2147483000;appearance:none;display:inline-flex;align-items:center;gap:6px;height:36px;padding:0 14px;border:1px solid var(--dsw-alias-brand-primary,#6dbf8c);border-radius:999px;background:var(--dsw-alias-bg-layer-1,#fff);color:var(--dsw-alias-label-primary,#16140f);cursor:move;font-family:inherit;font-size:13px;font-weight:600;line-height:1;box-shadow:0 8px 24px color-mix(in srgb,#000 34%,transparent),0 0 0 3px color-mix(in srgb,var(--dsw-alias-brand-primary,#6dbf8c) 22%,transparent);pointer-events:auto}
 .xsdsh-launch:hover{border-color:var(--dsw-alias-brand-primary,#6dbf8c);background:color-mix(in srgb,var(--dsw-alias-brand-primary,#6dbf8c) 18%,transparent)}
-.xsdsh-launch[data-open="1"]{display:none}
 .xsdsh-dock-head{display:flex;align-items:center;gap:8px;padding:10px 12px;border-bottom:1px solid color-mix(in srgb,var(--dsw-alias-border-l1,var(--xsdsh-line,#555)) 55%,transparent);background:transparent;cursor:grab;user-select:none;touch-action:none;color:var(--dsw-alias-label-primary,var(--xsdsh-ink,#f2f2f2));border-radius:12px 12px 0 0}
 .xsdsh-dock-head:active{cursor:grabbing}
 .xsdsh-dock-head b{font-size:14px;font-weight:600;color:inherit;text-shadow:0 1px 0 color-mix(in srgb,#000 18%,transparent)}
@@ -10631,201 +10630,6 @@ body[data-ds-dark-theme] .xsdsh-rewind-item span{color:var(--dsw-alias-label-ter
 			}
 		}
 
-		/* ── 对话窗口里的清洗开关条 ────────────────────────────────────────────
-		   需求：在对话里就能开关清洗面板、开关 Hook 拦截这些项，不用先摸到右下角
-		   的小圆钮再翻进面板。
-
-		   三条硬规矩：
-		   · 面板开关的状态一律从 useDock() 回读，组件自己不存「开没开」——
-		     否则点 dock 的 × 之后这里会一直亮着，变成假状态。
-		   · Hook 拦截这类**真正落盘的开关**，状态回读自后端（GET /hooks-deny），
-		     点的时候先乐观写 aria-checked，POST 回来以响应里的值为准；
-		     失败就回滚成点击前的值，并挂 role="alert" 说明。
-		   · 整条可收起：收起后只剩「清洗」这一颗，展开才露出一排小开关。
-		     收起状态存 localStorage，刷新后保持。 */
-		const SWITCH_BAR_KEY = "xsdsh.clean.switchbar";
-
-		function readSwitchBarOpen() {
-			try { return window.localStorage.getItem(SWITCH_BAR_KEY) !== "0"; } catch { return true; }
-		}
-
-		function saveSwitchBarOpen(on) {
-			try { window.localStorage.setItem(SWITCH_BAR_KEY, on ? "1" : "0"); } catch { /* 隐私模式等 */ }
-		}
-
-		function CleanSwitch(props) {
-			const t = props.t || translate;
-			const st = useDock();
-			const [barOpen, setBarOpen] = useState(readSwitchBarOpen);
-			const [pending, setPending] = useState(false);
-			const [hooksOn, setHooksOn] = useState(null);
-			const [hooksBusy, setHooksBusy] = useState(false);
-			const [failed, setFailed] = useState("");
-			const failTimer = useRef(0);
-			const aliveRef = useRef(true);
-
-			useEffect(() => {
-				aliveRef.current = true;
-				// Hook 拦截的真实状态：一律问后端，不在前端猜。
-				apiJson("/Xsdsh-purge-next/hooks-deny")
-					.then((d) => { if (aliveRef.current && d && d.ok) setHooksOn(d.hooksDenyBypass !== false); })
-					.catch(() => {});
-				return () => {
-					aliveRef.current = false;
-					if (failTimer.current) window.clearTimeout(failTimer.current);
-				};
-			}, []);
-
-			const flash = (text) => {
-				setFailed(text);
-				if (failTimer.current) window.clearTimeout(failTimer.current);
-				failTimer.current = window.setTimeout(() => {
-					if (aliveRef.current) setFailed("");
-				}, 2400);
-			};
-
-			const on = Boolean(st && st.open);
-
-			const togglePanel = () => {
-				if (pending) return;
-				const want = !on;
-				setPending(true);
-				setFailed("");
-				setDock({ open: want, authOpen: false, tab: want ? "clean" : (st && st.tab) || "clean", pending: "tab" });
-				// 下一帧再核对：dock 的 data-open 是渲染出来的，同步读不到。
-				const check = () => {
-					if (!aliveRef.current) return;
-					const node = typeof document !== "undefined" ? document.querySelector('.xsdsh-dock[data-open="1"]') : null;
-					const ok = want ? (dockBus.open === true && !!node) : (dockBus.open !== true);
-					setPending(false);
-					if (!ok) {
-						setDock({ open: !want, authOpen: false, tab: "clean", pending: "tab" });
-						flash(rewindText(t, "clean.switch.fail", "面板没打开，再点一次"));
-					}
-				};
-				if (typeof window !== "undefined" && window.requestAnimationFrame) {
-					window.requestAnimationFrame(() => window.setTimeout(check, 0));
-				} else {
-					setTimeout(check, 0);
-				}
-			};
-
-			/* Hook 拦截：乐观 → POST → 以后端回读为准；失败回滚成旧值。 */
-			const toggleHooks = () => {
-				if (hooksBusy || hooksOn === null) return;
-				const prev = hooksOn;
-				const want = !prev;
-				setHooksOn(want);
-				setHooksBusy(true);
-				apiJson("/Xsdsh-purge-next/hooks-deny", {
-					method: "POST",
-					headers: { "content-type": "application/json" },
-					body: JSON.stringify({ hooksDenyBypass: want }),
-				})
-					.then((d) => {
-						if (!aliveRef.current) return;
-						if (!d || !d.ok) throw new Error((d && d.error) || "");
-						setHooksOn(d.hooksDenyBypass === true);
-					})
-					.catch(() => {
-						if (!aliveRef.current) return;
-						setHooksOn(prev);
-						flash(rewindText(t, "clean.switch.saveFail", "没存上，已退回原样"));
-					})
-					.finally(() => { if (aliveRef.current) setHooksBusy(false); });
-			};
-
-			const toggleBar = () => {
-				const next = !barOpen;
-				setBarOpen(next);
-				saveSwitchBarOpen(next);
-			};
-
-			const label = rewindText(t, "clean.switch.label", "清洗");
-			const hooksLabel = rewindText(t, "hooksDeny.title", "Hook 拦截");
-			return h("span", { className: "xsdsh-clean-switch-wrap" },
-				h("style", null, CLEAN_SWITCH_CSS),
-				h("button", {
-					type: "button",
-					role: "switch",
-					className: "xsdsh-clean-switch",
-					"aria-checked": on ? "true" : "false",
-					"aria-busy": pending ? "true" : undefined,
-					"aria-label": label,
-					"aria-describedby": "xsdsh-clean-switch-desc",
-					title: on
-						? rewindText(t, "dock.close", "收起面板")
-						: rewindText(t, "dock.clean", "清洗"),
-					onMouseDown: (e) => e.preventDefault(),
-					onClick: (e) => { e.preventDefault(); togglePanel(); },
-				},
-					h("span", { className: "xsdsh-clean-switch-dot", "aria-hidden": "true" }),
-					label,
-				),
-				h("button", {
-					type: "button",
-					className: "xsdsh-clean-switch-more",
-					"aria-expanded": barOpen ? "true" : "false",
-					"aria-controls": "xsdsh-clean-switch-items",
-					"aria-label": barOpen
-						? rewindText(t, "clean.switch.collapse", "收起开关条")
-						: rewindText(t, "clean.switch.expand", "展开开关条"),
-					title: barOpen
-						? rewindText(t, "clean.switch.collapse", "收起开关条")
-						: rewindText(t, "clean.switch.expand", "展开开关条"),
-					onMouseDown: (e) => e.preventDefault(),
-					onClick: (e) => { e.preventDefault(); toggleBar(); },
-				}, barOpen ? "▾" : "▸"),
-				// 一排小开关：默认收起，展开才出现，不占输入框的宽度。
-				h("span", { className: "xsdsh-clean-switch-items", id: "xsdsh-clean-switch-items", hidden: barOpen ? undefined : true },
-					h("button", {
-						type: "button",
-						role: "switch",
-						className: "xsdsh-clean-switch is-item",
-						"aria-checked": hooksOn === true ? "true" : "false",
-						"aria-busy": hooksBusy ? "true" : undefined,
-						"aria-label": hooksLabel,
-						"aria-disabled": hooksOn === null ? "true" : undefined,
-						title: hooksOn === true
-							? hooksLabel + " · " + rewindText(t, "clean.pill.hooks.on", "放行")
-							: hooksLabel + " · " + rewindText(t, "clean.pill.hooks.off", "按官方"),
-						onMouseDown: (e) => e.preventDefault(),
-						onClick: (e) => { e.preventDefault(); toggleHooks(); },
-					},
-						h("span", { className: "xsdsh-clean-switch-dot", "aria-hidden": "true" }),
-						hooksLabel,
-					),
-				),
-				h("span", { id: "xsdsh-clean-switch-desc", className: "xsdsh-clean-switch-sr" },
-					rewindText(t, "clean.switch.desc", "在对话里打开或收起清洗面板；面板里有提示词、规矩本、技能和补丁。"),
-				),
-				// 面板开关的结果只由这一处播报（整页唯一一个 role=status），不抢读屏。
-				h("span", { className: "xsdsh-clean-switch-sr", role: "status", "aria-live": "polite" },
-					on ? rewindText(t, "clean.switch.on", "清洗面板已打开") : rewindText(t, "clean.switch.off", "清洗面板已收起"),
-				),
-				failed ? h("span", { className: "xsdsh-clean-switch-alert", role: "alert" }, failed) : null,
-			);
-		}
-
-		class CleanSwitchSafe extends Component {
-			constructor(p) { super(p); this.state = { failed: false }; }
-			static getDerivedStateFromError() { return { failed: true }; }
-			componentDidCatch(error) { try { console.error("[Xsdsh-purge-next] clean switch slot:", error); } catch { /* ignore */ } }
-			render() {
-				// 兜底也要能开面板：宿主升级把 hook 打坏时，至少留一个纯按钮。
-				if (this.state.failed) {
-					return h("button", {
-						type: "button",
-						role: "switch",
-						className: "xsdsh-clean-switch",
-						"aria-checked": dockBus.open ? "true" : "false",
-						"aria-label": rewindText(this.props.t || translate, "clean.switch.label", "清洗"),
-						onClick: () => toggleDock(),
-					}, rewindText(this.props.t || translate, "clean.switch.label", "清洗"));
-				}
-				return h(CleanSwitch, this.props);
-			}
-		}
 
 		function ContinueButton(props) {
 			const t = props.t || translate;
@@ -11420,7 +11224,7 @@ body[data-ds-dark-theme] .xsdsh-rewind-item span{color:var(--dsw-alias-label-ter
 		}
 		syncDrillGrant();
 
-		const DOCK_GEOM_KEY = "Xsdsh-purge-next-dock-geom-v4";
+		const DOCK_GEOM_KEY = "dsh破甲-dock-geom-v4";
 		/* 默认停在右上，底边留在输入框上面。拖动之后停在用户松开的位置，只保证不拖出窗口。 */
 		const DOCK_COMPOSER_CLEAR = 172;
 		function defaultDockGeom() {
@@ -12309,17 +12113,112 @@ function clampDockGeom(g) {
 			return h(react.Fragment, null, panel, auth);
 		}
 
+		function clampLaunchGeom(g) {
+			const vw = typeof window !== "undefined" ? window.innerWidth : 1280;
+			const vh = typeof window !== "undefined" ? window.innerHeight : 800;
+			const x = Math.min(Math.max(0, Number(g && g.x) || 16), Math.max(0, vw - 120));
+			const y = Math.min(Math.max(0, Number(g && g.y) || 16), Math.max(0, vh - 52));
+			return { x, y };
+		}
 		function PurgeLauncher() {
 			const t = useT();
 			const st = useDock();
-			return h("button", {
+			const [geom, setGeom] = useState(() => {
+				try {
+					const raw = JSON.parse(window.localStorage.getItem("dsh破甲-launch-geom-v1") || "null");
+					if (raw && typeof raw.x === "number" && typeof raw.y === "number") return clampLaunchGeom(raw);
+				} catch {}
+				return clampLaunchGeom({ x: 16, y: window.innerHeight - 52 });
+			});
+			const pointer = useRef(null);
+			const btnRef = useRef(null);
+			const draggedRef = useRef(false); /* 拖动/点击隔离：一次指针会话内位移超阈值即视为拖动 */
+			/* 全局重置：允许从控制台调用 window.__xdsp_resetLauncher() 把按钮放回右下角并关闭 dock，用于按钮意外不可见时的恢复。 */
+			useEffect(() => {
+				window.__xdsp_resetLauncher = () => {
+					try {
+						window.localStorage.removeItem("dsh破甲-launch-geom-v1");
+					} catch {}
+					setDock({ open: false, authOpen: false, pending: "tab" });
+					setGeom(clampLaunchGeom({ x: 16, y: typeof window !== "undefined" ? window.innerHeight - 52 : 16 }));
+				};
+				return () => { window.__xdsp_resetLauncher = undefined; };
+			}, []);
+			const startDrag = (event) => {
+				if (event.button !== 0) return;
+				event.preventDefault();
+				event.stopPropagation();
+				if (pointer.current) pointer.current.stop();
+				const btn = btnRef.current;
+				if (!btn) return;
+				const rect = btn.getBoundingClientRect();
+				const baseX = geom.x != null ? geom.x : rect.left;
+				const baseY = geom.y != null ? geom.y : rect.top;
+				const sx = event.clientX, sy = event.clientY;
+				let frame = 0;
+				let latest = null;
+				draggedRef.current = false; /* 每次按下重置；移动超过阈值才算「拖过」 */
+				const paint = () => {
+					frame = 0;
+					if (!latest || !btn) return;
+					btn.style.left = latest.x + "px";
+					btn.style.top = latest.y + "px";
+				};
+				const end = () => {
+					if (frame) { window.cancelAnimationFrame(frame); frame = 0; }
+					if (!latest) return;
+					const clamped = clampLaunchGeom(latest);
+					setGeom(clamped);
+					try {
+						window.localStorage.setItem("dsh破甲-launch-geom-v1", JSON.stringify(clamped));
+					} catch {}
+					latest = null;
+				};
+				pointer.current = beginPointerSession(ev => {
+					const dx = ev.clientX - sx, dy = ev.clientY - sy;
+					/* 拖动/点击隔离：位移超过 4px 判为拖动，松手后的 click 事件不触发开关。 */
+					if (Math.abs(dx) + Math.abs(dy) > 4) draggedRef.current = true;
+					latest = { x: baseX + dx, y: baseY + dy };
+					if (!frame) frame = window.requestAnimationFrame(paint);
+				}, end);
+			};
+			const style = {
+				position: "fixed",
+				zIndex: 2147483000,
+				pointerEvents: "auto",
+				cursor: "move",
+				left: geom.x,
+				top: geom.y,
+			};
+			const btnNode = h("button", {
 				type: "button",
+				ref: btnRef,
 				className: "xsdsh-launch",
 				"data-open": st.open ? "1" : "0",
-				"data-testid": "Xsdsh-purge-next-launch",
+				"data-testid": "dsh破甲-launch",
 				title: t("dock.newSession"),
-				onClick: () => toggleDock(),
+				onClick: () => {
+					/* 拖动结束的 click（pointerup 后必发一次）不触发开关；吞一次后复位。 */
+					if (draggedRef.current) {
+						draggedRef.current = false;
+						return;
+					}
+					toggleDock();
+				},
+				onPointerDown: startDrag,
+				style: style,
 			}, t("dock.newSession"));
+			/* 挂到 body 顶层：槽位里任何遮罩（重启遮罩 z=12000、环境适配 z=10200）都压不住它 */
+			try {
+				const rd = require("react-dom");
+				if (rd && typeof rd.createPortal === "function" && typeof document !== "undefined" && document.body) {
+					return rd.createPortal(btnNode, document.body);
+				}
+			} catch (e0) {
+				const note = "[Xsdsh-purge-next] launcher portal 失败，已就地渲染：" + String((e0 && e0.message) || e0);
+				if (typeof console !== "undefined" && console && typeof console.warn === "function") console.warn(note);
+			}
+			return btnNode;
 		}
 
 		/** 首页：模式旁挂「Xsdsh-purge-next」→ 打开插件。红队模式走模式下拉（registry 声明）。 */
@@ -12351,7 +12250,7 @@ function clampDockGeom(g) {
 					if (!el) {
 						el = document.createElement("div");
 						el.className = "xsdsh-hero-chip";
-						el.setAttribute("data-testid", "Xsdsh-purge-next-hero-chip");
+						el.setAttribute("data-testid", "dsh破甲-hero-chip");
 						row.appendChild(el);
 					}
 					setHost((prev) => (prev === el ? prev : el));
@@ -12385,73 +12284,6 @@ function clampDockGeom(g) {
 			return null;
 		}
 
-		/** 挂在「对话 / 轨迹 / 上下文」这一排，紧挨上下文。 */
-		function TabRowPurgeMount() {
-			const t = useT();
-			const st = useDock();
-			const [host, setHost] = useState(null);
-			useEffect(() => {
-				let dead = false;
-				let warnedMiss = false;
-				const ensure = () => {
-					if (dead || typeof document === "undefined") return;
-					/* 多路挂点兜底:data-* 优先,ARIA / class 子串兜底 */
-					const row =
-						document.querySelector("[data-conversation-tabs]") ||
-						document.querySelector("[data-conversation-tabrow]") ||
-						document.querySelector("[role='tablist'][aria-label*='对话' i]") ||
-						document.querySelector("[class*='conversation' i][class*='tab' i][class*='row' i]");
-					if (!row) {
-						if (!warnedMiss) {
-							warnedMiss = true;
-							try { console.warn("[Xsdsh-purge-next] TabRowPurgeMount: tab row anchor missing"); } catch { /* ignore */ }
-						}
-						setHost((prev) => (prev ? null : prev));
-						return;
-					}
-					warnedMiss = false;
-					let el = row.querySelector(":scope > .xsdsh-tab-chip");
-					if (!el) {
-						el = document.createElement("div");
-						el.className = "xsdsh-tab-chip";
-						el.setAttribute("data-testid", "Xsdsh-purge-next-tab-chip");
-						row.appendChild(el);
-					}
-					setHost((prev) => (prev === el ? prev : el));
-				};
-				ensure();
-				const obs = typeof MutationObserver !== "undefined"
-					? new MutationObserver(() => ensure())
-					: null;
-				if (obs) obs.observe(document.body, { childList: true, subtree: true });
-				const iv = setInterval(ensure, 1000);
-				return () => {
-					dead = true;
-					if (obs) obs.disconnect();
-					clearInterval(iv);
-				};
-			}, []);
-			if (!host) return null;
-			/* 页签行这颗 chip 和输入区那条开关读的是同一个 dockBus，
-			   所以两个入口永远同步。补上 role="switch" + aria-checked，
-			   读屏才知道它是「开关」而不是「切页签」。 */
-			const btn = h("button", {
-				type: "button",
-				role: "switch",
-				"aria-checked": st.open ? "true" : "false",
-				"aria-label": t("clean.switch.label"),
-				className: "xsdsh-tab-btn" + (st.open ? " on" : ""),
-				title: st.open ? (t("clean.switch.label") + " · " + t("clean.switch.on")) : (t("clean.switch.label") + " · " + t("dock.clean")),
-				onClick: () => toggleDock(),
-			}, t("clean.switch.label"));
-			try {
-				const rd = require("react-dom");
-				if (rd && typeof rd.createPortal === "function") return rd.createPortal(btn, host);
-			} catch { /* host 可能没暴露 react-dom */ }
-			return null;
-		}
-
-
 		function installRewindUi(ctx) {
 			rewindHost = ctx;
 			rewindSessions = ctx.sessions;
@@ -12459,25 +12291,13 @@ function clampDockGeom(g) {
 			rewindConversation = ctx.conversation || null;
 			ctx.slots.inject("conversation.input.right", () => ctx.slots.register({
 				name: "conversation.input.right",
-				id: "Xsdsh-purge-next-rewind",
+				id: "dsh破甲-rewind",
 				order: 20,
 				inject: (sessionId) => ({
 					sessionId,
 					t: ctx.locale.bind(NS),
 				}),
 			}, RewindSafe));
-			// 对话窗口里的清洗开关条：紧跟在回退按钮右边（order 22）。
-			// 它只读 dockBus，不自己存「开没开」——点 dock 的 × 或首页 launcher，
-			// 这边下一帧就跟着变，两边不可能不一致。
-			ctx.slots.inject("conversation.input.right", () => ctx.slots.register({
-				name: "conversation.input.right",
-				id: "Xsdsh-purge-next-clean-switch",
-				order: 22,
-				inject: (sessionId) => ({
-					sessionId,
-					t: ctx.locale.bind(NS),
-				}),
-			}, CleanSwitchSafe));
 			// ctx.slots.inject("conversation.input.right", () => ctx.slots.register({
 			// 	name: "conversation.input.right",
 			// 	id: "Xsdsh-purge-next-continue",
@@ -12496,9 +12316,9 @@ function clampDockGeom(g) {
 			translate = t;
 			ctx.slots.inject("shell.overlay", () => ctx.slots.register({
 				name: "shell.overlay",
-				id: "Xsdsh-purge-next-dock",
+				id: "dsh破甲-dock",
 				order: 50,
-			}, () => h(react.Fragment, null, h(WelcomeNotice), h(PurgeLauncher), h(PurgeDock), h(HeroNewSessionMount), h(TabRowPurgeMount), h(EnvAdaptSendGate))));
+			}, () => h(react.Fragment, null, h(WelcomeNotice), h(PurgeLauncher), h(PurgeDock), h(HeroNewSessionMount), h(EnvAdaptSendGate))));
 			try {
 				if (typeof ctx.inject === "function") {
 					ctx.inject(["sessions", "uiWorkspace", "workspaces", "conversation"], (host) => installRewindUi(host));

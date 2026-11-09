@@ -1,0 +1,552 @@
+
+### {"ev":[  来自 000065.log @ 54706
+{
+ "ev": [
+  {
+   "at": 183,
+   "k": "boot",
+   "d": [
+    true,
+    1,
+    [
+     "BUTTON",
+     "xsdsh-launch",
+     16,
+     810,
+     208,
+     36,
+     "flex",
+     "visible",
+     "1",
+     "10040",
+     "fixed",
+     "visible",
+     "auto",
+     "position: fixed; z-index: 10040; pointer-events: auto; cursor: move; left: 16px; top: 810px;"
+    ],
+    [
+     [
+      "BUTTON",
+      "xsdsh-launch",
+      16,
+      810,
+      208,
+      36,
+      "flex",
+      "visible",
+      "1",
+      "10040",
+      "fixed",
+      "visible",
+      "auto",
+      "position: fixed; z-index: 10040; pointer-events: auto; cursor: move; left: 16px; top: 810px;"
+     ],
+     [
+      "DIV",
+      "",
+      0,
+      0,
+      0,
+      0,
+      "contents",
+      "visible",
+      "1",
+      "auto",
+      "static",
+      "visible",
+      "auto",
+      "display: contents;"
+     ],
+     [
+      "DIV",
+      "VFpnAa_overlayLayer",
+      0,
+      0,
+      1444,
+      862,
+      "block",
+      "visible",
+      "1",
+      "20",
+      "absolute",
+      "visible",
+      "none",
+      ""
+     ],
+     [
+      "DIV",
+      "VFpnAa_frame",
+      0,
+      0,
+      1444,
+      862,
+      "grid",
+      "visible",
+      "1",
+      "auto",
+      "relative",
+      "hidden",
+      "auto",
+      "--dsh-windows-sidebar-width: 280px; grid-template-columns: 280px minmax(0px, 1fr) minmax(0px, 0px);"
+     ]
+    ],
+    [
+     "svg.[object SVGAnimatedStrin",
+     "DIV.",
+     "SPAN.",
+     "SCRIPT.",
+     "DIV.",
+     "DIV.",
+     "DIV.purge-app"
+    ]
+   ]
+  },
+  {
+   "at": 183,
+   "k": "t80",
+   "d": [
+    true,
+    1,
+    [
+     "BUTTON",
+     "xsdsh-launch",
+     16,
+     810,
+     208,
+     36,
+     "flex",
+     "visible",
+     "1",
+     "10040",
+     "fixed",
+     "visible",
+     "auto",
+     "position: fixed; z-index: 10040; pointer-events: auto; cursor: move; left: 16px; top: 810px;"
+    ]
+   ]
+  },
+  {
+   "at": 261,
+   "k": "t250",
+   "d": [
+    true,
+    1,
+    [
+     "BUTTON",
+     "xsdsh-launch",
+     16,
+     810,
+     208,
+     36,
+     "flex",
+     "visible",
+     "1",
+     "10040",
+     "fixed",
+     "visible",
+     "auto",
+     "position: fixed; z-index: 10040; pointer-events: auto; cursor: move; left: 16px; top: 810px;"
+    ]
+   ]
+  },
+  {
+   "at": 601,
+   "k": "t600",
+   "d": [
+    true,
+    1,
+    [
+     "BUTTON",
+     "xsdsh-launch",
+     16,
+     810,
+     208,
+     36,
+     "flex",
+     "visible",
+     "1",
+     "10040",
+     "fixed",
+     "visible",
+     "auto",
+     "position: fixed; z-index: 10040; pointer-events: auto; cursor: move; left: 16px; top: 810px;"
+    ]
+   ]
+  },
+  {
+   "at": 1101,
+   "k": "t1100",
+   "d": [
+    true,
+    1,
+    [
+     "BUTTON",
+     "xsdsh-launch",
+     16,
+     810,
+     208,
+     36,
+     "flex",
+     "visible",
+     "1",
+     "10040",
+     "fixed",
+     "visible",
+     "auto",
+     "position: fixed; z-index: 10040; pointer-events: auto; cursor: move; left: 16px; top: 810px;"
+    ]
+   ]
+  },
+  {
+   "at": 1801,
+   "k": "t1800",
+   "d": [
+    true,
+    1,
+    [
+     "BUTTON",
+     "xsdsh-launch",
+     16,
+     810,
+     208,
+     36,
+     "flex",
+     "visible",
+     "1",
+     "10040",
+     "fixed",
+     "visible",
+     "auto",
+     "position: fixed; z-index: 10040; pointer-events: auto; cursor: move; left: 16px; top: 810px;"
+    ]
+   ]
+  },
+  {
+   "at": 3003,
+   "k": "t3000",
+   "d": [
+    true,
+    1,
+    [
+     "BUTTON",
+     "xsdsh-launch",
+     16,
+     810,
+     208,
+     36,
+     "flex",
+     "visible",
+     "1",
+     "10040",
+     "fixed",
+     "visible",
+     "auto",
+     "position: fixed; z-index: 10040; pointer-events: auto; cursor: move; left: 16px; top: 810px;"
+    ]
+   ]
+  },
+  {
+   "at": 5003,
+   "k": "t5000",
+   "d": [
+    true,
+    1,
+    [
+     "BUTTON",
+     "xsdsh-launch",
+     16,
+     810,
+     208,
+     36,
+     "flex",
+     "visible",
+     "1",
+     "10040",
+     "fixed",
+     "visible",
+     "auto",
+     "position: fixed; z-index: 10040; pointer-events: auto; cursor: move; left: 16px; top: 810px;"
+    ]
+   ]
+  }
+ ],
+ "href": "dsh-app://app/",
+ "at": "2026-11-08T18:40:32.955Z"
+}
+
+### {"mini":[  来自 000065.log @ 57276
+{
+ "mini": [
+  {
+   "at": 183,
+   "k": "boot",
+   "d": [
+    true,
+    1,
+    [
+     "BUTTON",
+     "xsdsh-launch",
+     16,
+     810,
+     208,
+     36,
+     "flex",
+     "visible",
+     "1",
+     "10040",
+     "fixed",
+     "visible",
+     "auto",
+     "position: fixed; z-index: 10040; pointer-events: auto; cursor: move; left: 16px; top: 810px;"
+    ],
+    [
+     [
+      "BUTTON",
+      "xsdsh-launch",
+      16,
+      810,
+      208,
+      36,
+      "flex",
+      "visible",
+      "1",
+      "10040",
+      "fixed",
+      "visible",
+      "auto",
+      "position: fixed; z-index: 10040; pointer-events: auto; cursor: move; left: 16px; top: 810px;"
+     ],
+     [
+      "DIV",
+      "",
+      0,
+      0,
+      0,
+      0,
+      "contents",
+      "visible",
+      "1",
+      "auto",
+      "static",
+      "visible",
+      "auto",
+      "display: contents;"
+     ],
+     [
+      "DIV",
+      "VFpnAa_overlayLayer",
+      0,
+      0,
+      1444,
+      862,
+      "block",
+      "visible",
+      "1",
+      "20",
+      "absolute",
+      "visible",
+      "none",
+      ""
+     ],
+     [
+      "DIV",
+      "VFpnAa_frame",
+      0,
+      0,
+      1444,
+      862,
+      "grid",
+      "visible",
+      "1",
+      "auto",
+      "relative",
+      "hidden",
+      "auto",
+      "--dsh-windows-sidebar-width: 280px; grid-template-columns: 280px minmax(0px, 1fr) minmax(0px, 0px);"
+     ]
+    ],
+    [
+     "svg.[object SVGAnimatedStrin",
+     "DIV.",
+     "SPAN.",
+     "SCRIPT.",
+     "DIV.",
+     "DIV.",
+     "DIV.purge-app"
+    ]
+   ]
+  },
+  {
+   "at": 183,
+   "k": "t80",
+   "d": [
+    true,
+    1,
+    [
+     "BUTTON",
+     "xsdsh-launch",
+     16,
+     810,
+     208,
+     36,
+     "flex",
+     "visible",
+     "1",
+     "10040",
+     "fixed",
+     "visible",
+     "auto",
+     "position: fixed; z-index: 10040; pointer-events: auto; cursor: move; left: 16px; top: 810px;"
+    ]
+   ]
+  },
+  {
+   "at": 261,
+   "k": "t250",
+   "d": [
+    true,
+    1,
+    [
+     "BUTTON",
+     "xsdsh-launch",
+     16,
+     810,
+     208,
+     36,
+     "flex",
+     "visible",
+     "1",
+     "10040",
+     "fixed",
+     "visible",
+     "auto",
+     "position: fixed; z-index: 10040; pointer-events: auto; cursor: move; left: 16px; top: 810px;"
+    ]
+   ]
+  },
+  {
+   "at": 601,
+   "k": "t600",
+   "d": [
+    true,
+    1,
+    [
+     "BUTTON",
+     "xsdsh-launch",
+     16,
+     810,
+     208,
+     36,
+     "flex",
+     "visible",
+     "1",
+     "10040",
+     "fixed",
+     "visible",
+     "auto",
+     "position: fixed; z-index: 10040; pointer-events: auto; cursor: move; left: 16px; top: 810px;"
+    ]
+   ]
+  },
+  {
+   "at": 1101,
+   "k": "t1100",
+   "d": [
+    true,
+    1,
+    [
+     "BUTTON",
+     "xsdsh-launch",
+     16,
+     810,
+     208,
+     36,
+     "flex",
+     "visible",
+     "1",
+     "10040",
+     "fixed",
+     "visible",
+     "auto",
+     "position: fixed; z-index: 10040; pointer-events: auto; cursor: move; left: 16px; top: 810px;"
+    ]
+   ]
+  },
+  {
+   "at": 1801,
+   "k": "t1800",
+   "d": [
+    true,
+    1,
+    [
+     "BUTTON",
+     "xsdsh-launch",
+     16,
+     810,
+     208,
+     36,
+     "flex",
+     "visible",
+     "1",
+     "10040",
+     "fixed",
+     "visible",
+     "auto",
+     "position: fixed; z-index: 10040; pointer-events: auto; cursor: move; left: 16px; top: 810px;"
+    ]
+   ]
+  },
+  {
+   "at": 3003,
+   "k": "t3000",
+   "d": [
+    true,
+    1,
+    [
+     "BUTTON",
+     "xsdsh-launch",
+     16,
+     810,
+     208,
+     36,
+     "flex",
+     "visible",
+     "1",
+     "10040",
+     "fixed",
+     "visible",
+     "auto",
+     "position: fixed; z-index: 10040; pointer-events: auto; cursor: move; left: 16px; top: 810px;"
+    ]
+   ]
+  },
+  {
+   "at": 5003,
+   "k": "t5000",
+   "d": [
+    true,
+    1,
+    [
+     "BUTTON",
+     "xsdsh-launch",
+     16,
+     810,
+     208,
+     36,
+     "flex",
+     "visible",
+     "1",
+     "10040",
+     "fixed",
+     "visible",
+     "auto",
+     "position: fixed; z-index: 10040; pointer-events: auto; cursor: move; left: 16px; top: 810px;"
+    ]
+   ]
+  }
+ ],
+ "href": "dsh-app://app/",
+ "at": "2026-11-08T18:40:32.955Z"
+}
+
+### {"err": 未找到

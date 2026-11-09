@@ -1,7 +1,7 @@
 {
-  "name": "Xsdsh-purge-next",
-  "version": "4.6.11-next.2",
-  "description": "Xsdsh-purge-next 核心精简版（DSH NEXT / rc.4 专用；独立包名、模块 id、状态目录）",
+  "name": "xsdsh-purge-next",
+  "version": "1.0.0",
+  "description": "dsh破甲 核心精简版（DSH NEXT / rc.4 专用；独立包名、模块 id、状态目录）",
   "type": "module",
   "main": "lib/index.js",
   "exports": {
@@ -21,7 +21,7 @@
     "./reverse/tools": "./lib/reverse/tools.js"
   },
   "bin": {
-    "Xsdsh-purge-next": "bin/Xsdsh-purge.js",
+    "xsdsh-purge-next": "bin/Xsdsh-purge.js",
     "dsh-locate-harness": "tools/deepseek-harness-locator.mjs",
     "dsh-locate-harness-cmd": "tools/find-deepseek-harness.cmd"
   },
@@ -101,15 +101,18 @@
     "instructions",
     "rules",
     "prompt-eval",
-    "agent"
+    "agent",
+    "deepseek",
+    "security",
+    "redteam"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wodaimnd/Xsdsh-purge-next.git"
+    "url": "git+https://github.com/wodaimnd/xsdsh-purge-next.git"
   },
-  "homepage": "https://github.com/wodaimnd/Xsdsh-purge-next#readme",
+  "homepage": "https://github.com/wodaimnd/xsdsh-purge-next#readme",
   "bugs": {
-    "url": "https://github.com/wodaimnd/Xsdsh-purge-next/issues"
+    "url": "https://github.com/wodaimnd/xsdsh-purge-next/issues"
   },
   "dsh": {
     "bundle": {
@@ -126,9 +129,9 @@
     },
     "install": {
       "preferred": "tarball",
-      "tarball": "https://github.com/YuJunZhiXue/Xsdsh-purge/archive/refs/heads/master.tar.gz",
-      "zip": "https://github.com/YuJunZhiXue/Xsdsh-purge/archive/refs/heads/master.zip",
-      "git": "https://github.com/YuJunZhiXue/Xsdsh-purge.git"
+      "tarball": "https://github.com/wodaimnd/xsdsh-purge-next/archive/refs/heads/main.tar.gz",
+      "zip": "https://github.com/wodaimnd/xsdsh-purge-next/archive/refs/heads/main.zip",
+      "git": "https://github.com/wodaimnd/xsdsh-purge-next.git"
     }
   },
   "publishConfig": {
@@ -141,7 +144,7 @@
     "node": ">=18",
     "dsh": ">=0.2.1-rc.0 <0.3.0"
   },
-  "dshTarget": "0.2.1-rc.4",
+  "dshTarget": "0.2.2-rc.1",
   "devDependencies": {
     "@types/react": "18.3.12",
     "@typescript-eslint/parser": "8.46.2",
@@ -155,14 +158,14 @@
   },
   "dshNextCompat": {
     "engines": ">=0.2.1-rc.0 <0.3.0",
-    "verifiedRuntime": "0.2.1-rc.4",
+    "verifiedRuntime": "0.2.2-rc.1",
     "verifiedShell": "DSH NEXT.exe (desktopVersion 2.0.21-next)",
     "shellPatches": "45/46/82 在 rc.4 无对应实现；83/84 语义已由 rc.4 fail() 的 stopping 判定原生覆盖 → optional/knownGap",
     "flavor": "core",
     "coreBuildFrom": "4.6.11-next.1",
     "dataDir": "Xsdsh-purge-core",
     "profileScope": "next",
-    "coexistence": "与原版 4.6.11-alpha 并存：原版跑 profile desktop（rc.5），本副本跑 profile next（rc.4）；状态目录 Xsdsh-purge-core 与 Xsdsh-purge 物理隔离",
+    "coexistence": "与原版 4.6.11-alpha 并存：原版跑 profile desktop（0.2.1-rc.5），本副本跑 profile next（宿主已升到 0.2.2-rc.1）；状态目录 Xsdsh-purge-core 与 Xsdsh-purge 物理隔离",
     "removedFeatures": [
       "wallpapers",
       "background-music",
@@ -196,7 +199,79 @@
     "primeDisabledOnNext": true,
     "identity": "Xsdsh-purge-next",
     "coexistsWith": "Xsdsh-purge",
-    "appTarget": "DSH NEXT 2.0.21-next (core 0.2.1-rc.4)"
+    "appTarget": "DSH NEXT 2.0.21-next (core 0.2.2-rc.1)",
+    "runtimeHostObserved": "0.2.2-rc.1",
+    "runtimeHostObservedAt": "2026-11-08",
+    "runtimeHostEvidence": "asar 内 @deepseek-ai/dsh package.json version=0.2.2-rc.1；宿主侧 app.asar.xsdshpurge-flipped.json 记 52 条已改写、unrecoverable=0",
+    "upstreamSynced": "1.1.92",
+    "upstreamAbsorbed": [
+      {
+        "id": "preset-default",
+        "from": "dsh-purge@1.1.92",
+        "target": "lib/preset-default.js",
+        "note": "上游 1.1.92 preset-default.js 205 行 → 本实现（三预设 id / 归属标记才删目录 / atomicWriteSync / tryOr）",
+        "absorbedAt": "2026-11-08"
+      },
+      {
+        "id": "unauth-exploit-skill",
+        "from": "dsh-purge@1.1.92",
+        "target": "skills/redteam/unauth-exploit.md",
+        "note": "上游 8449 B → 8718 B；去 stage_code、记分键换 db-credential/server-host/bigdata-system、工具名对齐",
+        "absorbedAt": "2026-11-08"
+      },
+      {
+        "id": "web-reclaim",
+        "from": "dsh-purge@1.1.92",
+        "target": "lib/web-reclaim.js",
+        "note": "上游 5446 B → 本实现；RECORD_DIR 改 Xsdsh-purge-core、零 core import、记录带归属标记",
+        "absorbedAt": "2026-11-08"
+      },
+      {
+        "id": "bin-preflight",
+        "from": "dsh-purge@1.1.92",
+        "target": "lib/bin-preflight.js + lib/web-preflight-entry.mjs",
+        "note": "上游 3104+5994 B → 复用 hide-console 的路径解析；本机 asar 密封，稳定返回 sealed_asar",
+        "absorbedAt": "2026-11-08"
+      },
+      {
+        "id": "anchor",
+        "from": "dsh-purge@1.1.92",
+        "target": "lib/anchor.js",
+        "note": "上游 6951 B → 本实现；单 section + 文本切换替代 context 双注册，order 10300",
+        "absorbedAt": "2026-11-08"
+      },
+      {
+        "id": "profile-insert",
+        "from": "dsh-purge@1.1.92",
+        "target": "lib/profile-insert.js",
+        "note": "上游 17020 B → 本实现；allowBuilds key 写主体包名 Xsdsh-purge-next（不写 dsh-purge）、[] 空 flow 替换整行不追加二文档、写盘带 ops JSONL",
+        "absorbedAt": "2026-11-08"
+      },
+      {
+        "id": "apply-progress",
+        "from": "dsh-purge@1.1.92",
+        "target": "lib/apply-progress.js",
+        "note": "上游 1322 B → 本实现；内存单例 /dsh-purge/status 轮询字段，不落盘",
+        "absorbedAt": "2026-11-08"
+      },
+      {
+        "id": "subagent-control",
+        "from": "dsh-purge@1.1.92",
+        "target": "lib/subagent-control.js",
+        "note": "上游 2886 B → 本实现；P1 never→ask（MAX_FLIPS=4），P2 global 允许子会话 allowed-once，依赖 ./anchor.js 的 isSubagentContext",
+        "absorbedAt": "2026-11-08"
+      }
+    ],
+    "upstreamPending": [],
+    "forkedFrom": "https://github.com/YuJunZhiXue/Xsdsh-purge",
+    "forkNote": "fork 自 YuJunZhiXue/Xsdsh-purge；包名小写化以符合 npm 规范，安装与状态目录沿用原标识",
+    "forkVersionOrigin": "4.6.12-next.2"
   },
-  "author": "Kewei Chen <wodaimnd@users.noreply.github.com>"
+  "author": "Kewei Chen <wodaimnd@users.noreply.github.com>",
+  "contributors": [
+    {
+      "name": "YuJunZhiXue",
+      "url": "https://github.com/YuJunZhiXue/Xsdsh-purge"
+    }
+  ]
 }
