@@ -134,9 +134,6 @@
       "git": "https://github.com/wodaimnd/xsdsh-purge-next.git"
     }
   },
-  "publishConfig": {
-    "access": "public"
-  },
   "peerDependencies": {
     "@deepseek-ai/cordis": "^4.0.1"
   },
@@ -266,7 +263,17 @@
     "forkedFrom": "https://github.com/YuJunZhiXue/Xsdsh-purge",
     "forkNote": "fork 自 YuJunZhiXue/Xsdsh-purge；包名小写化以符合 npm 规范，安装与状态目录沿用原标识",
     "forkVersionOrigin": "4.6.12-next.2",
-    "versionNote": "1.0.0 曾在 npm 上 staged 但未完成（E409 无法覆盖），首版改用 1.0.1"
+    "versionNote": "1.0.0 曾在 npm 上 staged 但未完成（E409 无法覆盖），首版改用 1.0.1",
+    "renamedFrom": "xsdsh-purge-next",
+    "renameNote": "包名小写化只为符合 npm 命名规范；本插件不发 npm registry（见 npmPublishBlocked）",
+    "npmPublishBlocked": {
+      "at": "2026-11-09T02:33:46.653Z",
+      "reason": "npm 发布时扫描判定 xsdsh-purge-next@1.0.1 为 malware，账号转入只读模式",
+      "referenceId": "ef54fb9c-729d-407f-968a-3522ab5f3a80",
+      "why": "本插件会改写宿主 DSH 安装（app.asar 解包重写、profile 配置注入、提示词与工具定义改名），这类行为在 npm 的恶意软件特征上与后门/供应链攻击同类；扫描按内容判定，与使用意图无关",
+      "decision": "不再发布到任何公共 npm registry；仅通过 git 仓库分发（GitHub / Gitee / Codeberg）",
+      "cleanup": "裸名 xsdsh-purge-next 留有 0.0.0-stage（365 B 空占位，不可安装）；解封后可在 npm 设置里删弃该包名，否则该名不可再用"
+    }
   },
   "author": "Kewei Chen <wodaimnd@users.noreply.github.com>",
   "contributors": [
